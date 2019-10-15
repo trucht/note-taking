@@ -55,8 +55,14 @@ class EditNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadWebView()
-        setupNoteTitle()
         setupWebView()
+        setupNoteTitle()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
     }
     
     //MARK: - Methods
@@ -74,7 +80,8 @@ class EditNoteViewController: UIViewController {
     
     private func createNote() {
         note = Note(title: txtNoteTitle.text!, content: noteContent)
-        print(note?.content ?? "empty note")
+        guard let note = note else {return}
+        print(note.content)
     }
     
     private func updateNote() {
@@ -90,9 +97,9 @@ class EditNoteViewController: UIViewController {
     }
 
     private func btnDoneTapped() {
-        let js = "editor.getData()"
-        webView.evaluateJavaScript(js) { [weak self] (result, error) in
-            guard let strongSelf = self else {return}
+        let js = "window.editor.getData();"
+        webView.evaluateJavaScript(js) { [weak self] (result, _) in
+            guard let strongSelf = self, let result = result else {return}
             strongSelf.noteContent = result as! String
             switch strongSelf.state {
             case .Create:
@@ -105,19 +112,23 @@ class EditNoteViewController: UIViewController {
     
     private func loadNote(data: String) {
         let js = """
-        editor.setData("\(data)");
+            createEditor('\(data)');;
         """
-        webView.evaluateJavaScript(js, completionHandler: nil)
+        webView.evaluateJavaScript(js) { (_, error) in
+            if error != nil {
+                print(error as Any)
+            }
+        }
     }
 }
 
 //MARK: - Navigation Delegate
 extension EditNoteViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        if !firstTimeInit {
-            firstTimeInit = false
-            loadNote(data: "<b>test test test</b>")
+        if state == .Edit  {
+            loadNote(data: "test test test")
         }
+        loadNote(data: "test test test")
     }
 }
 
