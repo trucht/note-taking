@@ -128,7 +128,7 @@ extension EditNoteViewController: WKNavigationDelegate {
         if state == .Edit  {
             loadNote(data: "test test test")
         }
-        loadNote(data: "test test test")
+        loadNote(data: "<p>test test test</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>ee</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>&nbsp;</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>&nbsp;</p>")
     }
 }
 
