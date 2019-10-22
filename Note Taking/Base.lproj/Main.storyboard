@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fyG-Hx-PhP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vs1-Q6-xuo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,7 +45,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="V9K-1G-hLu">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oaQ-z1-grH"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oaQ-z1-grH">
+                            <connections>
+                                <action selector="btnCancelTapped:" destination="BYZ-38-t0r" id="ezz-sX-40B"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="eBA-dv-xZP">
                             <connections>
                                 <action selector="btnDoneTapped:" destination="BYZ-38-t0r" id="Si2-Ct-zPN"/>
@@ -92,20 +96,20 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoteListTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NoteListTableViewCell" id="i35-Va-6MY" customClass="NoteListTableViewCell" customModule="Note_Taking" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="66"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="66.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i35-Va-6MY" id="7zh-5Q-utK">
-                                            <rect key="frame" x="0.0" y="0.0" width="382.5" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="66.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOJ-vJ-a1S">
-                                                    <rect key="frame" x="16" y="8" width="358.5" height="21"/>
+                                                    <rect key="frame" x="16" y="8" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVG-Ct-WNk">
-                                                    <rect key="frame" x="16" y="37" width="358.5" height="21"/>
+                                                    <rect key="frame" x="16" y="37" width="359" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -139,7 +143,11 @@
                         <viewLayoutGuide key="safeArea" id="vZz-O2-UpG"/>
                     </view>
                     <navigationItem key="navigationItem" id="0GU-Xr-AFp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bo9-RQ-1ab"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bo9-RQ-1ab">
+                            <connections>
+                                <action selector="btnAddTapped:" destination="ezh-Fs-cz8" id="aso-pk-M8p"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnAdd" destination="bo9-RQ-1ab" id="d3c-YW-Dr3"/>
@@ -189,13 +197,22 @@
                         <viewLayoutGuide key="safeArea" id="TiG-x1-uby"/>
                     </view>
                     <navigationItem key="navigationItem" id="YXy-GK-0cA">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jNI-fp-Ku7"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="aMq-yh-6iB"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jNI-fp-Ku7">
+                            <connections>
+                                <action selector="btnCancelTapped:" destination="i3J-fg-Na6" id="R4a-mW-NN7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="aMq-yh-6iB">
+                            <connections>
+                                <action selector="btnEditTapped:" destination="i3J-fg-Na6" id="8B9-q9-jGn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnCancel" destination="jNI-fp-Ku7" id="lcq-Fa-TWf"/>
                         <outlet property="btnEdit" destination="aMq-yh-6iB" id="LDX-Wy-4Uz"/>
                         <outlet property="lblNoteTitle" destination="Li1-gG-WAz" id="mPj-Xf-R9z"/>
+                        <outlet property="webView" destination="4PG-3J-2di" id="C81-Tt-Cwg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43B-Ij-MsQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
