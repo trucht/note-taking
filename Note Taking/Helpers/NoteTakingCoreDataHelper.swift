@@ -13,7 +13,7 @@ class NoteTakingCoreDataHelper {
     private(set) static var count: Int = 0
     
     static func createNoteInCoreData(with note: NoteObject, in managedObjectContext: NSManagedObjectContext) {
-        guard let noteEntity = NSEntityDescription.entity(forEntityName: "Note", in: managedObjectContext) else {return}
+        guard let noteEntity = NSEntityDescription.entity(forEntityName: "NoteEntity", in: managedObjectContext) else {return}
         
         let newNote = NSManagedObject(entity: noteEntity, insertInto: managedObjectContext)
         
@@ -31,12 +31,12 @@ class NoteTakingCoreDataHelper {
     }
     
     static func updateNoteInCoreData(with note: NoteObject, in managedObjectContext: NSManagedObjectContext) {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
         
-        let nodeIdPredicate = NSPredicate(format: "nodeId = %@", note.id as CVarArg)
+        let noteIdPredicate = NSPredicate(format: "noteId = %@", note.id as CVarArg)
         
-        fetchRequest.predicate = nodeIdPredicate
-        
+        fetchRequest.predicate = noteIdPredicate
+
         do {
             let fetchedNoteList = try managedObjectContext.fetch(fetchRequest)
             let nodeToBeUpdated = fetchedNoteList[0] as! NSManagedObject
@@ -54,7 +54,7 @@ class NoteTakingCoreDataHelper {
     static func getNoteListFromCoreData(with managedObjectContext: NSManagedObjectContext) -> [NoteObject] {
         var noteList = [NoteObject]()
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
         fetchRequest.predicate = nil
         
         do {
@@ -78,7 +78,7 @@ class NoteTakingCoreDataHelper {
     
     static func getNoteFromCoreData(with nodeId:UUID, from managedObjectContext: NSManagedObjectContext) -> NoteObject? {
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
         
         let noteIdPredicate = NSPredicate(format: "noteId = %@", nodeId as CVarArg)
         
@@ -100,7 +100,7 @@ class NoteTakingCoreDataHelper {
     
     static func deleteNoteFromCoreData(with noteId: UUID, from managedObjectContext: NSManagedObjectContext) {
         
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
         
         let noteIdAsCVarArg: CVarArg = noteId as CVarArg
         let noteIdPredicate = NSPredicate(format: "noteId == %@", noteIdAsCVarArg)

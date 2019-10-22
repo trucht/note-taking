@@ -15,8 +15,7 @@ enum EditState {
 }
 
 class EditNoteViewController: UIViewController {
-    
-    
+        
     //Edit Existed Note
     class func initWith(note: NoteObject) -> UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EditNoteViewController") as! EditNoteViewController
@@ -44,12 +43,24 @@ class EditNoteViewController: UIViewController {
     var note: NoteObject?
     var noteContent: String = ""
     var state: EditState = .Create
+    var noteTimestamp: Int64 = Date().toSecond()
+    
+    var didTapBtnDone: (()->())?
     
     
     //MARK: - Actions
     @IBAction func btnDoneTapped(_ sender: UIBarButtonItem) {
-        btnDoneTapped()
+        handleBtnDoneTapped()
+        if let didTapBtnDone = didTapBtnDone {
+            didTapBtnDone()
+        }
+        navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func btnCancelTapped(_ sender: UIBarButtonItem) {
+        popToPreviousVC()
+    }
+    
     
     //MARK: - VC lifecycle methods
     override func viewDidLoad() {
@@ -58,11 +69,6 @@ class EditNoteViewController: UIViewController {
         setupWebView()
         setupNoteTitle()
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
     }
     
     //MARK: - Methods
@@ -79,15 +85,15 @@ class EditNoteViewController: UIViewController {
     }
     
     private func createNote() {
-//        note = Note(title: txtNoteTitle.text, content: noteContent)
-//        guard let note = note else {return}
-//        print(note.content)
+        guard let title = txtNoteTitle.text else {return}
+        let newNote = NoteObject(title: title, content: noteContent, timeStamp: noteTimestamp)
+        NoteTakingStorage.storage.addNote(with: newNote)
     }
     
     private func updateNote() {
-//        guard let note = note else {return}
-//        note.updateNote(with: txtNoteTitle.text!, content: noteContent)
-//        print(note.content)
+        guard let note = self.note, let title = txtNoteTitle.text else {return}
+        let updateNote = NoteObject(id: note.id, title: title, content: noteContent, timeStamp: noteTimestamp)
+        NoteTakingStorage.storage.updateNote(with: updateNote)
     }
     
     private func loadWebView() {
@@ -96,7 +102,7 @@ class EditNoteViewController: UIViewController {
         }
     }
 
-    private func btnDoneTapped() {
+    private func handleBtnDoneTapped() {
         let js = "window.editor.getData();"
         webView.evaluateJavaScript(js) { [weak self] (result, _) in
             guard let strongSelf = self, let result = result else {return}
@@ -108,6 +114,10 @@ class EditNoteViewController: UIViewController {
                 strongSelf.updateNote()
             }
         }
+    }
+    
+    private func popToPreviousVC() {
+        navigationController?.popViewController(animated: true)
     }
     
     private func loadNote(data: String) {
@@ -126,9 +136,11 @@ class EditNoteViewController: UIViewController {
 extension EditNoteViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if state == .Edit  {
-            loadNote(data: "test test test")
+            guard let note = note else {return}
+            loadNote(data: note.content)
+        } else {
+            loadNote(data: "")
         }
-        loadNote(data: "<p>test test test</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>ee</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>&nbsp;</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>e</p><p>&nbsp;</p>")
     }
 }
 

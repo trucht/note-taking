@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+            <link type="text/css" href="sample/css/note.css" rel="stylesheet" media="screen" />
+            <script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/decoupled-document/ckeditor.js"></script>
+            <title>CKEditor 5 – document editor build sample</title>
+            </head>
+    <body>
+        
+        <main>
+            <div class="centered">
+                <div class="document-editor" id="my-webview">
+                    <div class="toolbar-container" id="my-toolbar"></div>
+                    <div class="content-container" id="my-container">
+                        <div id="editor"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <script src="ckeditor.js"></script>
+        
+        <script>
+            
+            let editor;
+            
+            function load(webContent) {
+                document.getElementById("centered") = webContent
+            }
+        
+            function createEditor(webContent) {
+                DecoupledEditor
+                .create( document.querySelector( '#editor' ), {
+                        toolbar: ['bold', 'italic', 'underline', 'bulletedList', 'imageUpload' ],
+                        
+                        cloudServices: {
+                        tokenUrl: 'https://43006.cke-cs.com/token/dev/KPXKWtiouoPLV01vrgjblKrs23FxOPwCumZzwnZr93mhtkbgWWoeTG73ECLD',
+                        uploadUrl: 'https://43006.cke-cs.com/easyimage/upload/'
+                        }
+                        
+                        } )
+                        .then( editor => {
+                              const toolbarContainer = document.querySelector( 'main .toolbar-container' );
+                              
+                              toolbarContainer.prepend( editor.ui.view.toolbar.element );
+                              
+                              editor.setData(webContent);
+                              
+                              editor = editor;
+                              
+                              window.editor = editor;
+                              
+                              setupWebView()
+                              setupToolbar()
+                              setupContainer()
+                              
+                              
+                              } )
+                              .catch( err => {
+                                     console.error( err.stack );
+                                     } );
+            }
+        
+        function setupWebView() {
+            var myWebViewStyle = document.getElementById("my-webview").style
+            myWebViewStyle.position = "fixed";
+            myWebViewStyle.top = "0";
+            myWebViewStyle.bottom = "0";
+            myWebViewStyle.left = "0";
+            myWebViewStyle.right = "0";
+            myWebViewStyle.overflowY = "hidden";
+        }
+        
+        function setupToolbar() {
+            var myToolbarStyle = document.getElementById("my-toolbar").style
+            myToolbarStyle.position = "fixed";
+            myToolbarStyle.height = "50px";
+            myToolbarStyle.width = "-webkit-fill-available";
+        }
+        
+        function setupContainer() {
+            var myContainerStyle = document.getElementById("my-container").style
+            myContainerStyle.width = "-webkit-fill-available";
+            myContainerStyle.position = "absolute";
+            myContainerStyle.top = "50px";
+            myContainerStyle.bottom = "0";
+            myContainerStyle.overflowY = "scroll";
+            myContainerStyle.webkitOverflowScrolling = "touch";
+            myContainerStyle.border = "1px solid grey";
+            myContainerStyle.borderRadius = "3px";
+        }
+        
+            </script>
+        
+    </body>
+</html>

@@ -11,21 +11,22 @@ import UIKit
 class NoteListViewController: UIViewController {
         
     class func initWithStoryboard() -> UIViewController {
-        let vc = UIStoryboard(name: "main", bundle: nil).instantiateViewController(identifier: "NoteListViewController") as NoteListViewController
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NoteListViewController") as NoteListViewController
         return vc
     }
 
     @IBOutlet weak var btnAdd: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
-    var noteDetailViewController: NoteDetailsViewController? = nil
-    
+    @IBAction func btnAddTapped(_ sender: UIBarButtonItem) {
+        showAddNoteVC()
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupManagedContext()
         setupTableView()
-        showNoteDetail()
-        showAddNote()
+    
     }
     
     private func setupManagedContext() {
@@ -35,6 +36,10 @@ class NoteListViewController: UIViewController {
         
     }
     
+    private func setupNotificationCenter() {
+        let notiCenter = NotificationCenter.default
+    }
+    
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -42,12 +47,12 @@ class NoteListViewController: UIViewController {
         tableView.estimatedRowHeight = 64
     }
     
-    private func showNoteDetail() {
+    private func showNoteDetailVC() {
         let vc = NoteDetailsViewController.initWithStoryboard() as! NoteDetailsViewController
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    private func showAddNote() {
+    private func showAddNoteVC() {
         let vc = EditNoteViewController.initWithStoryboard() as! EditNoteViewController
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -60,7 +65,23 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoteListTableViewCell", for: indexPath) as! NoteListTableViewCell
+        guard let note = NoteTakingStorage.storage.getNote(at: indexPath.row) else {return UITableViewCell()}
+        cell.lblNoteTitle.text = note.title
+        cell.lblNoteContent.attributedText = note.content.convertHtml()
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let note = NoteTakingStorage.storage.getNote(at: indexPath.row) else {return}
+        let noteDetailVC = NoteDetailsViewController.initWithStoryboard() as! NoteDetailsViewController
+        noteDetailVC.note = note
+        print("1: \(note.id)")
+        navigationController?.pushViewController(noteDetailVC, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
