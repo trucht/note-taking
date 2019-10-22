@@ -18,7 +18,7 @@ class EditNoteViewController: UIViewController {
     
     
     //Edit Existed Note
-    class func initWith(note: Note) -> UIViewController {
+    class func initWith(note: NoteObject) -> UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EditNoteViewController") as! EditNoteViewController
         vc.state = .Edit
         vc.note = note
@@ -41,7 +41,7 @@ class EditNoteViewController: UIViewController {
     let userContentController = WKUserContentController()
     let config = WKWebViewConfiguration()
     var firstTimeInit = false
-    var note: Note?
+    var note: NoteObject?
     var noteContent: String = ""
     var state: EditState = .Create
     
@@ -79,15 +79,15 @@ class EditNoteViewController: UIViewController {
     }
     
     private func createNote() {
-        note = Note(title: txtNoteTitle.text!, content: noteContent)
-        guard let note = note else {return}
-        print(note.content)
+//        note = Note(title: txtNoteTitle.text, content: noteContent)
+//        guard let note = note else {return}
+//        print(note.content)
     }
     
     private func updateNote() {
-        guard let note = note else {return}
-        note.updateNote(with: txtNoteTitle.text!, content: noteContent)
-        print(note.content)
+//        guard let note = note else {return}
+//        note.updateNote(with: txtNoteTitle.text!, content: noteContent)
+//        print(note.content)
     }
     
     private func loadWebView() {
