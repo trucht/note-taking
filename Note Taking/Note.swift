@@ -8,22 +8,23 @@
 
 import Foundation
 
-class Note {
+class NoteObject {
     let id: UUID
     var title: String
     var content: String
+    var timeStamp: Int64
     
-    init(title: String, content: String) {
+    init(title: String, content: String, timeStamp: Int64) {
         self.id = UUID()
         self.title = title
         self.content = content
+        self.timeStamp = timeStamp
     }
-}
-
-extension Note {
-    func updateNote(with title: String, content: String) {
+    
+    init(id: UUID, title: String, content: String, timeStamp: Int64) {
+        self.id = id
         self.title = title
         self.content = content
+        self.timeStamp = timeStamp
     }
 }
-
