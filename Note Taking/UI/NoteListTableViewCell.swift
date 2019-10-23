@@ -15,7 +15,8 @@ class NoteListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        lblNoteContent.adjustsFontSizeToFitWidth = false
+        lblNoteContent.lineBreakMode = .byTruncatingTail
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

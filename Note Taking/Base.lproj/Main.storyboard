@@ -83,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="2978" y="814"/>
         </scene>
-        <!--Note List View Controller-->
+        <!--Note List-->
         <scene sceneID="kAR-uT-ZjN">
             <objects>
                 <viewController storyboardIdentifier="NoteListViewController" id="ezh-Fs-cz8" customClass="NoteListViewController" customModule="Note_Taking" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,31 +96,31 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoteListTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NoteListTableViewCell" id="i35-Va-6MY" customClass="NoteListTableViewCell" customModule="Note_Taking" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="66"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i35-Va-6MY" id="7zh-5Q-utK">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOJ-vJ-a1S">
-                                                    <rect key="frame" x="16" y="8" width="359" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="16" y="8" width="351" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVG-Ct-WNk">
-                                                    <rect key="frame" x="16" y="37" width="359" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVG-Ct-WNk">
+                                                    <rect key="frame" x="16" y="40" width="351" height="23"/>
+                                                    <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="bOJ-vJ-a1S" secondAttribute="trailing" constant="8" id="EGc-DR-RZf"/>
+                                                <constraint firstAttribute="trailing" secondItem="bOJ-vJ-a1S" secondAttribute="trailing" constant="16" id="EGc-DR-RZf"/>
                                                 <constraint firstAttribute="bottom" secondItem="vVG-Ct-WNk" secondAttribute="bottom" constant="8" id="J9B-Z9-jKI"/>
                                                 <constraint firstItem="vVG-Ct-WNk" firstAttribute="top" secondItem="bOJ-vJ-a1S" secondAttribute="bottom" constant="8" id="Yys-kC-8lo"/>
                                                 <constraint firstItem="bOJ-vJ-a1S" firstAttribute="leading" secondItem="7zh-5Q-utK" secondAttribute="leading" constant="16" id="hdh-Mg-MDF"/>
-                                                <constraint firstAttribute="trailing" secondItem="vVG-Ct-WNk" secondAttribute="trailing" constant="8" id="nzM-Gj-hp3"/>
+                                                <constraint firstAttribute="trailing" secondItem="vVG-Ct-WNk" secondAttribute="trailing" constant="16" id="nzM-Gj-hp3"/>
                                                 <constraint firstItem="bOJ-vJ-a1S" firstAttribute="top" secondItem="7zh-5Q-utK" secondAttribute="top" constant="8" id="spL-o2-Zpk"/>
                                                 <constraint firstItem="vVG-Ct-WNk" firstAttribute="leading" secondItem="7zh-5Q-utK" secondAttribute="leading" constant="16" id="vAd-BA-QCy"/>
                                             </constraints>
@@ -142,7 +142,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vZz-O2-UpG"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0GU-Xr-AFp">
+                    <navigationItem key="navigationItem" title="Note List" id="0GU-Xr-AFp">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bo9-RQ-1ab">
                             <connections>
                                 <action selector="btnAddTapped:" destination="ezh-Fs-cz8" id="aso-pk-M8p"/>
@@ -158,7 +158,7 @@
             </objects>
             <point key="canvasLocation" x="936" y="814"/>
         </scene>
-        <!--Note Details View Controller-->
+        <!--Note Details-->
         <scene sceneID="aQT-m7-eG3">
             <objects>
                 <viewController storyboardIdentifier="NoteDetailsViewController" id="i3J-fg-Na6" customClass="NoteDetailsViewController" customModule="Note_Taking" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,7 +196,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TiG-x1-uby"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YXy-GK-0cA">
+                    <navigationItem key="navigationItem" title="Note Details" id="YXy-GK-0cA">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jNI-fp-Ku7">
                             <connections>
                                 <action selector="btnCancelTapped:" destination="i3J-fg-Na6" id="R4a-mW-NN7"/>
