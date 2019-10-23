@@ -34,18 +34,11 @@ class EditNoteViewController: UIViewController {
     let config = WKWebViewConfiguration()
     var note: NoteObject?
     var noteContent: String = ""
-    var noteTimestamp: Int64 = Date().toSecond()
-    
-    var didTapBtnDone: (()->())?
-    
+    var noteTimestamp: Int64 = Date().toSecond()    
     
     //MARK: - Actions
     @IBAction func btnDoneTapped(_ sender: UIBarButtonItem) {
         handleBtnDoneTapped()
-        if let didTapBtnDone = didTapBtnDone {
-            didTapBtnDone()
-        }
-        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func btnCancelTapped(_ sender: UIBarButtonItem) {
@@ -100,8 +93,11 @@ class EditNoteViewController: UIViewController {
             strongSelf.noteContent = result as! String
             if strongSelf.note == nil {
                 strongSelf.createNote()
+                strongSelf.navigationController?.popViewController(animated: true)
             } else {
                 strongSelf.updateNote()
+                let viewControllers: [UIViewController] = strongSelf.navigationController!.viewControllers as [UIViewController]
+                strongSelf.navigationController!.popToViewController(viewControllers[0], animated: true)
             }
             NotificationCenter.default.post(name: .didTapBtnDone, object: self)
         }
