@@ -58,30 +58,37 @@ class NoteDetailsViewController: UIViewController {
         webView.scrollView.bounces = false
         webView.scrollView.isScrollEnabled = true
         webView.contentMode = .scaleToFill
+        webView.scalesLargeContentImage = true
     }
     
     private func loadWebView() {
         guard let note = note else {return}
-        let htmlString = """
+        let contentHTML = """
         <html>
         <body>
         \(note.content)
         </body>
         </html>
         """
-        webView.loadHTMLString(htmlString, baseURL: nil)
-    }
-}
-
-extension NoteDetailsViewController: UIScrollViewDelegate {
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-         webView.evaluateJavaScript("document.documentElement.scrollHeight", completionHandler: { (height, error) in
-         })
+        var htmlString = "<header><meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'></header>"
+        htmlString.append(contentHTML)
+        webView.loadHTMLString(htmlString.HTMLImageCorrector(), baseURL: nil)
     }
 }
 
 extension NoteDetailsViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        let jsString = """
+            document.getElementsByTagName('img')[0].style.width = "-webkit-fill-available"
+            """
+        webView.evaluateJavaScript(jsString, completionHandler: nil)
+    }
+}
+
+extension NoteDetailsViewController: UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         nil
     }
 }
+
+

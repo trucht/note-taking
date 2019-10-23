@@ -51,14 +51,14 @@ class EditNoteViewController: UIViewController {
         super.viewDidLoad()
         loadWebView()
         setupWebView()
-        setupNoteTitle()
+        setupUI()
         
     }
     
     //MARK: - Methods
-    private func setupNoteTitle() {
-        guard let note = note else {return}
-        self.txtNoteTitle.text = note.title
+    private func setupUI() {
+        self.title = note != nil ? "Edit Note" : "Add Note"
+        self.txtNoteTitle.text = note?.title
     }
     
     private func setupWebView() {
@@ -109,7 +109,7 @@ class EditNoteViewController: UIViewController {
     
     private func loadNote(data: String) {
         let js = """
-            createEditor('\(data)');;
+            createEditor('\(data)');
         """
         webView.evaluateJavaScript(js) { (_, error) in
             if error != nil {

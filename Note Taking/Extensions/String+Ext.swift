@@ -17,4 +17,21 @@ extension String{
             return NSAttributedString()
         }
     }
+    
+    func HTMLImageCorrector() -> String {
+        var HTMLToBeReturned = self
+        while HTMLToBeReturned.range(of: "(?<=width=\")[^\" height]+", options: .regularExpression) != nil{
+            if let match = HTMLToBeReturned.range(of: "(?<=width=\")[^\" height]+", options: .regularExpression) {
+                HTMLToBeReturned.removeSubrange(match)
+                if let match2 = HTMLToBeReturned.range(of: "(?<=height=\")[^\"]+", options: .regularExpression) {
+                    HTMLToBeReturned.removeSubrange(match2)
+                    let string2del = "width=\"\" height=\"\""
+                    HTMLToBeReturned = HTMLToBeReturned.replacingOccurrences(of: string2del, with: "style=\"width: 100%\"")
+                }
+            }
+            
+        }
+        
+        return HTMLToBeReturned
+    }
 }
