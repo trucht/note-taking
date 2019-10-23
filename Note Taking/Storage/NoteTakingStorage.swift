@@ -33,7 +33,7 @@ class NoteTakingStorage {
         }
     }
     
-    func addNote(with note: NoteObject ) {
+    func addNote(with note: NoteObject) {
         if managedContextHasBeenSet {
             noteIndexToInt[currentIndex] = note.id
             NoteTakingCoreDataHelper.createNoteInCoreData(with: note, in: self.managedObjectContext)
@@ -75,7 +75,7 @@ class NoteTakingStorage {
         }
         return nil
     }
-    
+
     func updateNote(with note: NoteObject) {
         if managedContextHasBeenSet {
             var noteIndex : Int?
@@ -92,7 +92,6 @@ class NoteTakingStorage {
             }
         }
     }
-
     
     func count() -> Int {
         return NoteTakingCoreDataHelper.count

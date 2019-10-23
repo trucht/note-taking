@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3619498F235EF2FB00F1C065 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619498E235EF2FB00F1C065 /* String+Ext.swift */; };
-		36A1E6FB235EC38C00566D26 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6B5235EC38C00566D26 /* index.html */; };
+		36194992235F14DC00F1C065 /* Notification+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36194991235F14DC00F1C065 /* Notification+Ext.swift */; };
+		36A1E6FB235EC38C00566D26 /* editNote.html in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6B5235EC38C00566D26 /* editNote.html */; };
 		36A1E6FC235EC38C00566D26 /* ckeditor.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6B6235EC38C00566D26 /* ckeditor.js */; };
 		36A1E6FD235EC38C00566D26 /* sample.css in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6B9235EC38C00566D26 /* sample.css */; };
 		36A1E6FE235EC38C00566D26 /* github.svg in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6BB235EC38C00566D26 /* github.svg */; };
@@ -91,7 +92,8 @@
 
 /* Begin PBXFileReference section */
 		3619498E235EF2FB00F1C065 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
-		36A1E6B5235EC38C00566D26 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		36194991235F14DC00F1C065 /* Notification+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Ext.swift"; sourceTree = "<group>"; };
+		36A1E6B5235EC38C00566D26 /* editNote.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = editNote.html; sourceTree = "<group>"; };
 		36A1E6B6235EC38C00566D26 /* ckeditor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ckeditor.js; sourceTree = "<group>"; };
 		36A1E6B9235EC38C00566D26 /* sample.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sample.css; sourceTree = "<group>"; };
 		36A1E6BB235EC38C00566D26 /* github.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = github.svg; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				60B22DB7235977F60049B235 /* Date+Ext.swift */,
 				3619498E235EF2FB00F1C065 /* String+Ext.swift */,
+				36194991235F14DC00F1C065 /* Notification+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,7 +208,7 @@
 		36A1E6B4235EC38C00566D26 /* ckeditor5 */ = {
 			isa = PBXGroup;
 			children = (
-				36A1E6B5235EC38C00566D26 /* index.html */,
+				36A1E6B5235EC38C00566D26 /* editNote.html */,
 				36A1E6B6235EC38C00566D26 /* ckeditor.js */,
 				36A1E6B7235EC38C00566D26 /* sample */,
 				36A1E6BF235EC38C00566D26 /* ckeditor.js.map */,
@@ -327,11 +330,11 @@
 		60B809B62350259F006F815F /* Note Taking */ = {
 			isa = PBXGroup;
 			children = (
+				36A1E6B4235EC38C00566D26 /* ckeditor5 */,
 				60B855DD235067F6006F815F /* Note.swift */,
+				60B22DB4235974620049B235 /* TakingNoteData.xcdatamodeld */,
 				36194990235EFB8600F1C065 /* Model */,
 				3619498D235EF2D900F1C065 /* Extensions */,
-				60B22DB4235974620049B235 /* TakingNoteData.xcdatamodeld */,
-				36A1E6B4235EC38C00566D26 /* ckeditor5 */,
 				60FAA0B3235D9D0C00D4EFB9 /* Helpers */,
 				60FAA0B4235D9DEF00D4EFB9 /* UI */,
 				60FAA0B5235D9F8100D4EFB9 /* Storage */,
@@ -459,7 +462,7 @@
 				36A1E717235EC38C00566D26 /* he.js in Resources */,
 				36A1E706235EC38C00566D26 /* gl.js in Resources */,
 				36A1E716235EC38C00566D26 /* ja.js in Resources */,
-				36A1E6FB235EC38C00566D26 /* index.html in Resources */,
+				36A1E6FB235EC38C00566D26 /* editNote.html in Resources */,
 				36A1E718235EC38C00566D26 /* ug.js in Resources */,
 				36A1E711235EC38C00566D26 /* kn.js in Resources */,
 				36A1E723235EC38C00566D26 /* pt-br.js in Resources */,
@@ -519,6 +522,7 @@
 				60B22DAD23572B930049B235 /* NoteDetailsViewController.swift in Sources */,
 				60B22DBB2359A9380049B235 /* NoteTakingDateHelper.swift in Sources */,
 				60B22DB8235977F60049B235 /* Date+Ext.swift in Sources */,
+				36194992235F14DC00F1C065 /* Notification+Ext.swift in Sources */,
 				60B855DE235067F6006F815F /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

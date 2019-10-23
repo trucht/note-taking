@@ -46,6 +46,7 @@ class NoteTakingCoreDataHelper {
             nodeToBeUpdated.setValue(note.timeStamp, forKey: "noteTimeStamp")
             
             try managedObjectContext.save()
+            
         } catch let error as NSError {
             print("Updating Error - \(error): \(error.userInfo)")
         }
