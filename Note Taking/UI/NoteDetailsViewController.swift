@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 class NoteDetailsViewController: UIViewController {
-
+    
     class func initWithStoryboard() -> UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NoteDetailsViewController") as NoteDetailsViewController
         return vc
@@ -26,9 +26,10 @@ class NoteDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTitle()
+        loadWebView()
         setupWebView()
     }
-
+    
     @IBAction func btnEditTapped(_ sender: Any) {
         showEditNoteVC()
     }
@@ -59,22 +60,23 @@ class NoteDetailsViewController: UIViewController {
         webView.contentMode = .scaleToFill
     }
     
-    private func loadWebContent(with note: NoteObject) {
-        let js = """
-        load('\(note.content)');;
+    private func loadWebView() {
+        guard let note = note else {return}
+        let htmlString = """
+        <html>
+        <body>
+        \(note.content)
+        </body>
+        </html>
         """
-        webView.evaluateJavaScript(js) { (_, error) in
-            if error != nil {
-                print(error as Any)
-            }
-        }
+        webView.loadHTMLString(htmlString, baseURL: nil)
     }
 }
 
 extension NoteDetailsViewController: UIScrollViewDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        guard let note = note else {return}
-        loadWebContent(with: note)
+         webView.evaluateJavaScript("document.documentElement.scrollHeight", completionHandler: { (height, error) in
+         })
     }
 }
 

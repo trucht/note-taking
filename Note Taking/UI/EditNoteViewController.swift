@@ -9,17 +9,11 @@
 import UIKit
 import WebKit
 
-enum EditState {
-    case Create
-    case Edit
-}
-
 class EditNoteViewController: UIViewController {
         
     //Edit Existed Note
     class func initWith(note: NoteObject) -> UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EditNoteViewController") as! EditNoteViewController
-        vc.state = .Edit
         vc.note = note
         return vc
     }
@@ -27,7 +21,6 @@ class EditNoteViewController: UIViewController {
     //Create New Note
     class func initWithStoryboard() -> UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EditNoteViewController") as! EditNoteViewController
-        vc.state = .Create
         return vc
     }
     
@@ -39,10 +32,8 @@ class EditNoteViewController: UIViewController {
     //MARK: - Properties
     let userContentController = WKUserContentController()
     let config = WKWebViewConfiguration()
-    var firstTimeInit = false
     var note: NoteObject?
     var noteContent: String = ""
-    var state: EditState = .Create
     var noteTimestamp: Int64 = Date().toSecond()
     
     var didTapBtnDone: (()->())?
@@ -73,7 +64,7 @@ class EditNoteViewController: UIViewController {
     
     //MARK: - Methods
     private func setupNoteTitle() {
-        guard state == .Edit, let note = note else {return}
+        guard let note = note else {return}
         self.txtNoteTitle.text = note.title
     }
     
@@ -97,7 +88,7 @@ class EditNoteViewController: UIViewController {
     }
     
     private func loadWebView() {
-        if let url = Bundle.main.url(forResource: "index", withExtension: "html") {
+        if let url = Bundle.main.url(forResource: "editNote", withExtension: "html") {
             webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
         }
     }
@@ -107,12 +98,12 @@ class EditNoteViewController: UIViewController {
         webView.evaluateJavaScript(js) { [weak self] (result, _) in
             guard let strongSelf = self, let result = result else {return}
             strongSelf.noteContent = result as! String
-            switch strongSelf.state {
-            case .Create:
+            if strongSelf.note == nil {
                 strongSelf.createNote()
-            case .Edit:
+            } else {
                 strongSelf.updateNote()
             }
+            NotificationCenter.default.post(name: .didTapBtnDone, object: self)
         }
     }
     
@@ -135,9 +126,8 @@ class EditNoteViewController: UIViewController {
 //MARK: - Navigation Delegate
 extension EditNoteViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        if state == .Edit  {
-            guard let note = note else {return}
-            loadNote(data: note.content)
+        if note != nil {
+            loadNote(data: note!.content)
         } else {
             loadNote(data: "")
         }

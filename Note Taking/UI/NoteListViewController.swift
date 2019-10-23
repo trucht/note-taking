@@ -26,18 +26,26 @@ class NoteListViewController: UIViewController {
         super.viewDidLoad()
         setupManagedContext()
         setupTableView()
+        setupNotificationCenter()
+    }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     private func setupManagedContext() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         let managedContext = appDelegate.persistentContainer.viewContext
         NoteTakingStorage.storage.setManagedContext(with: managedContext)
-        
     }
     
     private func setupNotificationCenter() {
-        let notiCenter = NotificationCenter.default
+         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: Notification.Name.didTapBtnDone, object: nil)
+    }
+    
+    @objc private func reloadTableView() {
+        setupManagedContext()
+        tableView.reloadData()
     }
     
     private func setupTableView() {
@@ -75,7 +83,6 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
         guard let note = NoteTakingStorage.storage.getNote(at: indexPath.row) else {return}
         let noteDetailVC = NoteDetailsViewController.initWithStoryboard() as! NoteDetailsViewController
         noteDetailVC.note = note
-        print("1: \(note.id)")
         navigationController?.pushViewController(noteDetailVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
