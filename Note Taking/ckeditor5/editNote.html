@@ -28,18 +28,11 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
         <script>
             
             let editor;
-            
-            editor.editing.view.on( 'render', () => {
-                                   editor.editing.view.scrollToTheSelection();
-                                   }, { priority: 'low' } );
-                                   
-                                   function load(webContent) {
-                                       document.getElementById("centered") = webContent
-                                   }
         
         function createEditor(webContent) {
             DecoupledEditor
             .create( document.querySelector( '#editor' ), {
+                    placeholder: 'Type the content here!',
                     toolbar: ['bold', 'italic', 'underline', 'bulletedList', 'imageUpload' ],
                     
                     cloudServices: {
@@ -56,6 +49,10 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
                           editor.setData(webContent);
                           
                           editor = editor;
+                          
+                          editor.editing.view.on( 'render', () => {
+                          editor.editing.view.scrollToTheSelection();
+                          }, { priority: 'low' } );
                           
                           window.editor = editor;
                           
@@ -97,7 +94,6 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
             myContainerStyle.webkitOverflowScrolling = "touch";
             myContainerStyle.border = "1px solid grey";
             myContainerStyle.borderRadius = "3px";
-            myContainerStyle.placeholder = "Start your note here ...";
         }
         
         function setEditor() {
@@ -115,3 +111,4 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
         </script>
     </body>
 </html>
+
