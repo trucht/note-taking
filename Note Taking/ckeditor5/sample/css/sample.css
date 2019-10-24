@@ -265,9 +265,13 @@ footer {
 	color: rgba(0,0,0,.4);
 }
 
+
+.ck-content .editor: focus {
+    border: none
+}
 /* --------- RWD ------------------------------------------------------------------------------- */
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
 	header .centered {
 		padding-top: var(--ck-sample-base-spacing);
 		padding-bottom: var(--ck-sample-base-spacing);

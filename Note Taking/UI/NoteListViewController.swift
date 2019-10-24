@@ -55,11 +55,6 @@ class NoteListViewController: UIViewController {
         tableView.estimatedRowHeight = 64
     }
     
-    private func showNoteDetailVC() {
-        let vc = NoteDetailsViewController.initWithStoryboard() as! NoteDetailsViewController
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
     private func showAddNoteVC() {
         let vc = EditNoteViewController.initWithStoryboard() as! EditNoteViewController
         navigationController?.pushViewController(vc, animated: true)
