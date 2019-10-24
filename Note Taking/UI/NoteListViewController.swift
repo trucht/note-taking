@@ -81,7 +81,7 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let note = NoteTakingStorage.storage.getNote(at: indexPath.row) else {return}
-        let noteDetailVC = NoteDetailsViewController.initWithStoryboard() as! NoteDetailsViewController
+        let noteDetailVC = EditNoteViewController.initWithStoryboard() as! EditNoteViewController
         noteDetailVC.note = note
         navigationController?.pushViewController(noteDetailVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)

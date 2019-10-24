@@ -74,7 +74,6 @@
 		36A1E739235EC38C00566D26 /* eo.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F8235EC38C00566D26 /* eo.js */; };
 		36A1E73A235EC38C00566D26 /* ro.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F9235EC38C00566D26 /* ro.js */; };
 		36A1E73B235EC38C00566D26 /* tr.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6FA235EC38C00566D26 /* tr.js */; };
-		60B22DAD23572B930049B235 /* NoteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B22DAC23572B930049B235 /* NoteDetailsViewController.swift */; };
 		60B22DAF23572BC40049B235 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B22DAE23572BC40049B235 /* NoteListViewController.swift */; };
 		60B22DB323596BC80049B235 /* NoteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B22DB223596BC80049B235 /* NoteListTableViewCell.swift */; };
 		60B22DB6235974620049B235 /* TakingNoteData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60B22DB4235974620049B235 /* TakingNoteData.xcdatamodeld */; };
@@ -159,7 +158,6 @@
 		36A1E6F8235EC38C00566D26 /* eo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = eo.js; sourceTree = "<group>"; };
 		36A1E6F9235EC38C00566D26 /* ro.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ro.js; sourceTree = "<group>"; };
 		36A1E6FA235EC38C00566D26 /* tr.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = tr.js; sourceTree = "<group>"; };
-		60B22DAC23572B930049B235 /* NoteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailsViewController.swift; sourceTree = "<group>"; };
 		60B22DAE23572BC40049B235 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		60B22DB223596BC80049B235 /* NoteListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListTableViewCell.swift; sourceTree = "<group>"; };
 		60B22DB5235974620049B235 /* TakingNoteData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TakingNoteData.xcdatamodel; sourceTree = "<group>"; };
@@ -361,7 +359,6 @@
 			children = (
 				60B22DAE23572BC40049B235 /* NoteListViewController.swift */,
 				60B22DB223596BC80049B235 /* NoteListTableViewCell.swift */,
-				60B22DAC23572B930049B235 /* NoteDetailsViewController.swift */,
 				60B809BB2350259F006F815F /* EditNoteViewController.swift */,
 			);
 			path = UI;
@@ -519,7 +516,6 @@
 				60B22DAF23572BC40049B235 /* NoteListViewController.swift in Sources */,
 				60B809BA2350259F006F815F /* SceneDelegate.swift in Sources */,
 				60B22DB323596BC80049B235 /* NoteListTableViewCell.swift in Sources */,
-				60B22DAD23572B930049B235 /* NoteDetailsViewController.swift in Sources */,
 				60B22DBB2359A9380049B235 /* NoteTakingDateHelper.swift in Sources */,
 				60B22DB8235977F60049B235 /* Date+Ext.swift in Sources */,
 				36194992235F14DC00F1C065 /* Notification+Ext.swift in Sources */,
