@@ -27,6 +27,7 @@ class EditNoteViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet var webView: WKWebView!
     @IBOutlet weak var txtNoteTitle: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     //MARK: - Properties
@@ -57,6 +58,7 @@ class EditNoteViewController: UIViewController {
     
     //MARK: - Methods
     private func setupUI() {
+        activityIndicator.startAnimating()
         self.title = note != nil ? "Edit Note" : "Add Note"
         self.txtNoteTitle.text = note?.title
     }
@@ -127,6 +129,8 @@ extension EditNoteViewController: WKNavigationDelegate {
         } else {
             loadNote(data: "")
         }
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
     }
 }
 
