@@ -17,7 +17,7 @@
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e19-f3-8Bn">
                                 <rect key="frame" x="8" y="148" width="398" height="714"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -31,6 +31,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ml3-5K-iXt">
+                                <rect key="frame" x="187" y="428" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="4mV-8Y-AXB"/>
+                                    <constraint firstAttribute="height" constant="40" id="gLi-w0-qY6"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -39,7 +46,9 @@
                             <constraint firstItem="e19-f3-8Bn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="IKg-pM-goz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e19-f3-8Bn" secondAttribute="bottom" id="Tzi-Pt-kC0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8TO-Rf-mVD" secondAttribute="trailing" constant="8" id="XEx-RF-swK"/>
+                            <constraint firstItem="ml3-5K-iXt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ahQ-Vs-fbY"/>
                             <constraint firstItem="e19-f3-8Bn" firstAttribute="top" secondItem="8TO-Rf-mVD" secondAttribute="bottom" constant="8" id="kvj-cp-tXn"/>
+                            <constraint firstItem="ml3-5K-iXt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mjN-n8-wxL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e19-f3-8Bn" secondAttribute="trailing" constant="8" id="yaf-cp-g7b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -57,6 +66,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="ml3-5K-iXt" id="KYm-qi-rfs"/>
                         <outlet property="txtNoteTitle" destination="8TO-Rf-mVD" id="4jk-d3-tyU"/>
                         <outlet property="webView" destination="e19-f3-8Bn" id="qgM-Zf-T7X"/>
                     </connections>
@@ -96,10 +106,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NoteListTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="NoteListTableViewCell" id="i35-Va-6MY" customClass="NoteListTableViewCell" customModule="Note_Taking" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="71"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="71.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i35-Va-6MY" id="7zh-5Q-utK">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="71"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="71.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOJ-vJ-a1S">
@@ -109,7 +119,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVG-Ct-WNk">
-                                                    <rect key="frame" x="16" y="40" width="351" height="23"/>
+                                                    <rect key="frame" x="16" y="40" width="351" height="23.5"/>
                                                     <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -177,22 +187,31 @@
                             </label>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4PG-3J-2di">
                                 <rect key="frame" x="8" y="148" width="398" height="714"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Htq-rg-lG8">
+                                <rect key="frame" x="187" y="428" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="StP-TT-bxQ"/>
+                                    <constraint firstAttribute="width" constant="40" id="nnM-LJ-XOV"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="TiG-x1-uby" firstAttribute="trailing" secondItem="Li1-gG-WAz" secondAttribute="trailing" constant="8" id="6KK-LP-3vJ"/>
+                            <constraint firstItem="Htq-rg-lG8" firstAttribute="centerX" secondItem="cQI-QP-rdA" secondAttribute="centerX" id="Udi-Qa-uGl"/>
                             <constraint firstItem="Li1-gG-WAz" firstAttribute="leading" secondItem="TiG-x1-uby" secondAttribute="leading" constant="8" id="bb4-VY-daw"/>
                             <constraint firstItem="4PG-3J-2di" firstAttribute="top" secondItem="Li1-gG-WAz" secondAttribute="bottom" constant="8" id="cKz-jT-2YA"/>
                             <constraint firstItem="TiG-x1-uby" firstAttribute="trailing" secondItem="4PG-3J-2di" secondAttribute="trailing" constant="8" id="iWt-3k-dRZ"/>
                             <constraint firstItem="Li1-gG-WAz" firstAttribute="top" secondItem="TiG-x1-uby" secondAttribute="top" constant="8" id="mfO-L8-DAx"/>
                             <constraint firstItem="TiG-x1-uby" firstAttribute="bottom" secondItem="4PG-3J-2di" secondAttribute="bottom" id="n9O-c8-Qvh"/>
                             <constraint firstItem="4PG-3J-2di" firstAttribute="leading" secondItem="TiG-x1-uby" secondAttribute="leading" constant="8" id="sh3-1x-0Zi"/>
+                            <constraint firstItem="Htq-rg-lG8" firstAttribute="centerY" secondItem="cQI-QP-rdA" secondAttribute="centerY" id="z6U-26-kdp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TiG-x1-uby"/>
                     </view>
@@ -209,6 +228,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="Htq-rg-lG8" id="Mlp-Oe-izl"/>
                         <outlet property="btnCancel" destination="jNI-fp-Ku7" id="lcq-Fa-TWf"/>
                         <outlet property="btnEdit" destination="aMq-yh-6iB" id="LDX-Wy-4Uz"/>
                         <outlet property="lblNoteTitle" destination="Li1-gG-WAz" id="mPj-Xf-R9z"/>

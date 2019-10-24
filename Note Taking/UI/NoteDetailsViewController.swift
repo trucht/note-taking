@@ -20,12 +20,13 @@ class NoteDetailsViewController: UIViewController {
     @IBOutlet weak var btnEdit: UIBarButtonItem!
     @IBOutlet weak var lblNoteTitle: UILabel!
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var note: NoteObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTitle()
+        setupUI()
         loadWebView()
         setupWebView()
     }
@@ -48,8 +49,9 @@ class NoteDetailsViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    private func setupTitle() {
+    private func setupUI() {
         guard let note = note else {return}
+        activityIndicator.startAnimating()
         lblNoteTitle.text = note.title
     }
     
@@ -78,6 +80,8 @@ class NoteDetailsViewController: UIViewController {
 
 extension NoteDetailsViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
         let jsString = """
             document.getElementsByTagName('img')[0].style.width = "-webkit-fill-available"
             """
