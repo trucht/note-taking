@@ -12,10 +12,21 @@ class NoteListManager {
     
     static let shared = NoteListManager()
     
-    var noteList: [Note] = []
+    private var noteList: [Note] = []
     
     private init() {
         loadNoteList()
+    }
+    
+    func getNotesCount() -> Int {
+        return noteList.count
+    }
+    
+    func getNote(at index: Int) -> Note? {
+        if index >= 0 && index < noteList.count {
+            return noteList[index]
+        }
+        return nil
     }
     
     func loadNoteList() {
@@ -35,7 +46,7 @@ class NoteListManager {
     }
     
     func updateItem(at index: Int, with note: Note) {
-        if index > 0 && index < noteList.count {
+        if index >= 0 && index < noteList.count {
             noteList[index] = note
             NoteTakingStorage.storage.updateNote(with: note)
         }

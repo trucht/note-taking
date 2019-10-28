@@ -77,7 +77,7 @@ class EditNoteViewController: UIViewController {
     private func createNote() {
         guard let title = txtNoteTitle.text else {return}
         let newNote = Note(title: title, content: noteContent, timeStamp: noteTimestamp)
-        NoteTakingStorage.storage.addNote(with: newNote)
+        noteListManager.addItem(newNote: newNote)
     }
     
     private func updateNote() {
