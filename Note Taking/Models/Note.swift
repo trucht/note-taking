@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NoteObject {
+class Note {
     let id: UUID
     var title: String
     var content: String

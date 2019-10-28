@@ -12,7 +12,7 @@ import CoreData
 class NoteTakingCoreDataHelper {
     private(set) static var count: Int = 0
     
-    static func createNoteInCoreData(with note: NoteObject, in managedObjectContext: NSManagedObjectContext) {
+    static func createNoteInCoreData(with note: Note, in managedObjectContext: NSManagedObjectContext) {
         guard let noteEntity = NSEntityDescription.entity(forEntityName: "NoteEntity", in: managedObjectContext) else {return}
         
         let newNote = NSManagedObject(entity: noteEntity, insertInto: managedObjectContext)
@@ -30,7 +30,7 @@ class NoteTakingCoreDataHelper {
         }
     }
     
-    static func updateNoteInCoreData(with note: NoteObject, in managedObjectContext: NSManagedObjectContext) {
+    static func updateNoteInCoreData(with note: Note, in managedObjectContext: NSManagedObjectContext) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
         
         let noteIdPredicate = NSPredicate(format: "noteId = %@", note.id as CVarArg)
@@ -52,8 +52,8 @@ class NoteTakingCoreDataHelper {
         }
     }
     
-    static func getNoteListFromCoreData(with managedObjectContext: NSManagedObjectContext) -> [NoteObject] {
-        var noteList = [NoteObject]()
+    static func getNoteListFromCoreData(with managedObjectContext: NSManagedObjectContext) -> [Note] {
+        var noteList = [Note]()
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
         fetchRequest.predicate = nil
@@ -62,7 +62,7 @@ class NoteTakingCoreDataHelper {
             let fetchedNoteListFromCoreData = try managedObjectContext.fetch(fetchRequest)
             fetchedNoteListFromCoreData.forEach { (fetchRequestResult) in
                 let noteManagedObjectRead = fetchRequestResult as! NSManagedObject
-                noteList.append(NoteObject.init(
+                noteList.append(Note.init(
                     id:        noteManagedObjectRead.value(forKey: "noteId")        as! UUID,
                     title:     noteManagedObjectRead.value(forKey: "noteTitle")     as! String,
                     content:      noteManagedObjectRead.value(forKey: "noteContent")      as! String,
@@ -77,7 +77,7 @@ class NoteTakingCoreDataHelper {
         return noteList
     }
     
-    static func getNoteFromCoreData(with nodeId:UUID, from managedObjectContext: NSManagedObjectContext) -> NoteObject? {
+    static func getNoteFromCoreData(with nodeId:UUID, from managedObjectContext: NSManagedObjectContext) -> Note? {
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteEntity")
         
@@ -88,7 +88,7 @@ class NoteTakingCoreDataHelper {
         do {
             let fetchedNotesFromCoreData = try managedObjectContext.fetch(fetchRequest)
             let noteManagedObjectToBeRead = fetchedNotesFromCoreData[0] as! NSManagedObject
-            return NoteObject.init(
+            return Note.init(
                 id:        noteManagedObjectToBeRead.value(forKey: "noteId")        as! UUID,
                 title:     noteManagedObjectToBeRead.value(forKey: "noteTitle")     as! String,
                 content:      noteManagedObjectToBeRead.value(forKey: "noteContent")      as! String,
