@@ -57,7 +57,6 @@ class EditNoteViewController: UIViewController {
         loadWebView()
         setupWebView()
         setupUI()
-        
     }
     
     //MARK: - Methods
@@ -87,8 +86,10 @@ class EditNoteViewController: UIViewController {
     }
     
     private func loadWebView() {
-        if let url = Bundle.main.url(forResource: "editNote", withExtension: "html") {
-            webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
+        DispatchQueue.main.async {
+            if let url = Bundle.main.url(forResource: "editNote", withExtension: "html") {
+                self.webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
+            }
         }
     }
 
@@ -117,10 +118,12 @@ class EditNoteViewController: UIViewController {
         let js = """
             createEditor('\(data)');
         """
-        webView.evaluateJavaScript(js) { (_, error) in
+        webView.evaluateJavaScript(js) { [weak self] (_, error) in
             if error != nil {
                 print(error as Any)
             }
+            self?.activityIndicator.stopAnimating()
+            self?.activityIndicator.isHidden = true
         }
     }
 }
@@ -133,8 +136,6 @@ extension EditNoteViewController: WKNavigationDelegate {
         } else {
             loadNote(data: "")
         }
-        activityIndicator.stopAnimating()
-        activityIndicator.isHidden = true
     }
 }
 
