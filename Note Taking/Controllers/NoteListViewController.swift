@@ -57,6 +57,7 @@ class NoteListViewController: UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 64
+        tableView.separatorStyle = .none
     }
     
     private func showAddNoteVC() {
