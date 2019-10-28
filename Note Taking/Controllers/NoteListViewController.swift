@@ -67,19 +67,19 @@ class NoteListViewController: UIViewController {
 
 extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return noteListManager.noteList.count
+        return noteListManager.getNotesCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoteListTableViewCell", for: indexPath) as! NoteListTableViewCell
-        let note = noteListManager.noteList[indexPath.row]
+        guard let note = noteListManager.getNote(at: indexPath.row) else {return UITableViewCell()}
         cell.lblNoteTitle.text = note.title
         cell.lblNoteContent.attributedText = note.content.convertHtml()
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let note = noteListManager.noteList[indexPath.row]
+        guard let note = noteListManager.getNote(at: indexPath.row) else {return}
         let noteDetailVC = EditNoteViewController.initWith(note: note, index: indexPath.row) as! EditNoteViewController
         navigationController?.pushViewController(noteDetailVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
