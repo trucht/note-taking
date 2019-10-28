@@ -12,9 +12,10 @@ import WebKit
 class EditNoteViewController: UIViewController {
         
     //Edit Existed Note
-    class func initWith(note: NoteObject) -> UIViewController {
+    class func initWith(note: Note, index: Int) -> UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EditNoteViewController") as! EditNoteViewController
         vc.note = note
+        vc.index = index
         return vc
     }
     
@@ -33,9 +34,12 @@ class EditNoteViewController: UIViewController {
     //MARK: - Properties
     let userContentController = WKUserContentController()
     let config = WKWebViewConfiguration()
-    var note: NoteObject?
+    var note: Note?
     var noteContent: String = ""
-    var noteTimestamp: Int64 = Date().toSecond()    
+    var noteTimestamp: Int64 = Date().toSecond()
+    let noteListManager = NoteListManager.shared
+    var index: Int = 0
+    
     
     //MARK: - Actions
     @IBAction func btnDoneTapped(_ sender: UIBarButtonItem) {
@@ -72,14 +76,14 @@ class EditNoteViewController: UIViewController {
     
     private func createNote() {
         guard let title = txtNoteTitle.text else {return}
-        let newNote = NoteObject(title: title, content: noteContent, timeStamp: noteTimestamp)
+        let newNote = Note(title: title, content: noteContent, timeStamp: noteTimestamp)
         NoteTakingStorage.storage.addNote(with: newNote)
     }
     
     private func updateNote() {
         guard let note = self.note, let title = txtNoteTitle.text else {return}
-        let updateNote = NoteObject(id: note.id, title: title, content: noteContent, timeStamp: noteTimestamp)
-        NoteTakingStorage.storage.updateNote(with: updateNote)
+        let updateNote = Note(id: note.id, title: title, content: noteContent, timeStamp: noteTimestamp)
+        noteListManager.updateItem(at: index, with: updateNote)
     }
     
     private func loadWebView() {

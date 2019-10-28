@@ -7,13 +7,14 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
     <head>
         <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-            <link type="text/css" href="sample/css/sample.css" rel="stylesheet" media="screen" />
+<!--            <link type="text/css" href="sample/css/sample.css" rel="stylesheet" media="screen" />-->
             <title>CKEditor 5 – document editor build sample</title>
             </head>
     <body>
         
         <main>
             <div class="centered">
+                
                 <div class="document-editor" id="my-webview">
                     <div class="toolbar-container" id="my-toolbar"></div>
                     <div class="content-container" id="my-container">
@@ -23,7 +24,7 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
             </div>
         </main>
         
-        <script src="ckeditor.js"></script>
+        <script src="./ckeditor.js"></script>
         
         <script>
             
@@ -32,7 +33,7 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
         function createEditor(webContent) {
             DecoupledEditor
             .create( document.querySelector( '#editor' ), {
-                    placeholder: 'Type the content here!',
+                    placeholder: 'Tap here to type your content here!',
                     toolbar: ['bold', 'italic', 'underline', 'bulletedList', 'imageUpload' ],
                     
                     cloudServices: {
@@ -111,4 +112,5 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
         </script>
     </body>
 </html>
+
 

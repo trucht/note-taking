@@ -14,13 +14,16 @@ class NoteListViewController: UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NoteListViewController") as NoteListViewController
         return vc
     }
-
-    @IBOutlet weak var btnAdd: UIBarButtonItem!
-    @IBOutlet weak var tableView: UITableView!
     
     @IBAction func btnAddTapped(_ sender: UIBarButtonItem) {
         showAddNoteVC()
     }
+    
+    
+    @IBOutlet weak var btnAdd: UIBarButtonItem!
+    @IBOutlet weak var tableView: UITableView!
+    
+    let noteListManager = NoteListManager.shared
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,7 @@ class NoteListViewController: UIViewController {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         let managedContext = appDelegate.persistentContainer.viewContext
         NoteTakingStorage.storage.setManagedContext(with: managedContext)
+        noteListManager.loadNoteList()
     }
     
     private func setupNotificationCenter() {
@@ -63,21 +67,20 @@ class NoteListViewController: UIViewController {
 
 extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        NoteTakingStorage.storage.count()
+        return noteListManager.noteList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoteListTableViewCell", for: indexPath) as! NoteListTableViewCell
-        guard let note = NoteTakingStorage.storage.getNote(at: indexPath.row) else {return UITableViewCell()}
+        let note = noteListManager.noteList[indexPath.row]
         cell.lblNoteTitle.text = note.title
         cell.lblNoteContent.attributedText = note.content.convertHtml()
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let note = NoteTakingStorage.storage.getNote(at: indexPath.row) else {return}
-        let noteDetailVC = EditNoteViewController.initWithStoryboard() as! EditNoteViewController
-        noteDetailVC.note = note
+        let note = noteListManager.noteList[indexPath.row]
+        let noteDetailVC = EditNoteViewController.initWith(note: note, index: indexPath.row) as! EditNoteViewController
         navigationController?.pushViewController(noteDetailVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -88,8 +91,8 @@ extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            NoteTakingStorage.storage.removeNote(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            noteListManager.removeItem(at: indexPath.row)
+            tableView.reloadData()
         }
     }
 }
