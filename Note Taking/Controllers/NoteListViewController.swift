@@ -9,7 +9,7 @@
 import UIKit
 
 class NoteListViewController: UIViewController {
-        
+    
     class func initWithStoryboard() -> UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NoteListViewController") as NoteListViewController
         return vc
@@ -24,7 +24,7 @@ class NoteListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let noteListManager = NoteListManager.shared
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupManagedContext()
@@ -44,7 +44,7 @@ class NoteListViewController: UIViewController {
     }
     
     private func setupNotificationCenter() {
-         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: Notification.Name.didTapBtnDone, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: Notification.Name.didTapBtnDone, object: nil)
     }
     
     @objc private func reloadTableView() {
@@ -58,6 +58,10 @@ class NoteListViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 64
         tableView.separatorStyle = .none
+        
+        let emptyView = Bundle.main.loadNibNamed("NoteListEmptyView", owner: self, options: nil)?.first as! NoteListEmptyView
+        
+        tableView.backgroundView = emptyView
     }
     
     private func showAddNoteVC() {
@@ -66,9 +70,13 @@ class NoteListViewController: UIViewController {
     }
 }
 
+
 extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return noteListManager.getNotesCount()
+        let count = noteListManager.getNotesCount()
+        tableView.backgroundView?.isHidden = (count != 0)
+        return count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

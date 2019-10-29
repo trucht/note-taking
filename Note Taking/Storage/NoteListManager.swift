@@ -34,10 +34,10 @@ class NoteListManager {
     }
     
     func removeItem(at index: Int) {
-        if index > 0 && index < noteList.count {
+        if index >= 0 && index < noteList.count {
             let noteToRemove = noteList[index]
-            NoteTakingStorage.storage.removeNote(with: noteToRemove)
             noteList.remove(at: index)
+            NoteTakingStorage.storage.removeNote(with: noteToRemove)
         }
     }
     

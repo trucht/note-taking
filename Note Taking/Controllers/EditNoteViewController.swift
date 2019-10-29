@@ -59,7 +59,13 @@ class EditNoteViewController: UIViewController {
         setupUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadViewIfNeeded()
+    }
+    
     //MARK: - Methods
+
     private func setupUI() {
         activityIndicator.startAnimating()
         self.title = note != nil ? "Edit Note" : "Add Note"
