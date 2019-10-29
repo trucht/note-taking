@@ -7,8 +7,11 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
     <head>
         <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<!--            <link type="text/css" href="sample/css/sample.css" rel="stylesheet" media="screen" />-->
+            <!--            <link type="text/css" href="sample/css/sample.css" rel="stylesheet" media="screen" />-->
             <title>CKEditor 5 – document editor build sample</title>
+            <script>
+                import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter'
+                </script>
             </head>
     <body>
         
@@ -27,46 +30,49 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
         <script src="./ckeditor.js"></script>
         
         <script>
-            
             let editor;
-        
-        function createEditor(webContent) {
-            DecoupledEditor
-            .create( document.querySelector( '#editor' ), {
-                    placeholder: 'Tap here to type your content here!',
-                    toolbar: ['bold', 'italic', 'underline', 'bulletedList', 'imageUpload' ],
-                    
-                    cloudServices: {
-                    tokenUrl: 'https://43006.cke-cs.com/token/dev/KPXKWtiouoPLV01vrgjblKrs23FxOPwCumZzwnZr93mhtkbgWWoeTG73ECLD',
-                    uploadUrl: 'https://43006.cke-cs.com/easyimage/upload/'
-                    }
-                    
-                    } )
-                    .then( editor => {
-                          const toolbarContainer = document.querySelector( 'main .toolbar-container' );
-                          
-                          toolbarContainer.prepend( editor.ui.view.toolbar.element );
-                          
-                          editor.setData(webContent);
-                          
-                          editor = editor;
-                          
-                          editor.editing.view.on( 'render', () => {
-                          editor.editing.view.scrollToTheSelection();
-                          }, { priority: 'low' } );
-                          
-                          window.editor = editor;
-                          
-                          setupWebView()
-                          setupToolbar()
-                          setupContainer()
-                          setEditor()
-                          
-                          } )
-                          .catch( err => {
-                                 console.error( err.stack );
-                                 } );
-        }
+            
+            function createEditor(webContent) {
+                DecoupledEditor
+                .create( document.querySelector( '#editor' ), {
+                        plugind: [],
+                        placeholder: 'Tap here to type your content here!',
+                        toolbar: ['bold', 'italic', 'underline', 'bulletedList', 'imageUpload' ],
+                        
+                        cloudServices: {    tokenUrl: 'https://43006.cke-cs.com/token/dev/KPXKWtiouoPLV01vrgjblKrs23FxOPwCumZzwnZr93mhtkbgWWoeTG73ECLD',
+                        uploadUrl: 'https://43006.cke-cs.com/easyimage/upload/'                   }
+                        
+                        } )
+                        .then( editor => {
+                              const toolbarContainer = document.querySelector( 'main .toolbar-container' );
+                              
+                              toolbarContainer.prepend( editor.ui.view.toolbar.element );
+                              
+                              editor.setData(webContent);
+                              
+                              editor = editor;
+             
+                              window.editor = editor;
+                              
+                              setupWebView()
+                              setupToolbar()
+                              setupContainer()
+                              setEditor()
+                              
+                              editor.on('afterCommandExec', handleAfterCommandExec);
+                              
+                              function handleAfterCommandExec(event) {
+                                  var commandName = event.data.name;
+                              if (commandName == 'imageUpload') {
+                              document.getElementById("my-container").style.background = "blue"
+                              }
+                            }
+                      
+                      } )
+                      .catch( err => {
+                             console.error( err.stack );
+                             } );
+            }
         
         function setupWebView() {
             var myWebViewStyle = document.getElementById("my-webview").style
@@ -80,7 +86,7 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
         
         function setupToolbar() {
             var myToolbarStyle = document.getElementById("my-toolbar").style
-            myToolbarStyle.position = "fixed";
+            myToolbarStyle.position = "sticky";
             myToolbarStyle.height = "50px";
             myToolbarStyle.width = "-webkit-fill-available";
         }
@@ -107,7 +113,6 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
                                       this.style.overflowY = "scroll";
                                       this.style.webkitOverflowScrolling = "touch";
                                       })
-                                      
         }
         </script>
     </body>

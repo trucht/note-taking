@@ -75,6 +75,8 @@
 		36A1E73A235EC38C00566D26 /* ro.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F9235EC38C00566D26 /* ro.js */; };
 		36A1E73B235EC38C00566D26 /* tr.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6FA235EC38C00566D26 /* tr.js */; };
 		36B2208D2362F7330011ED60 /* NoteListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2208C2362F7330011ED60 /* NoteListManager.swift */; };
+		36B2208F23681B020011ED60 /* NoteListEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B2208E23681B020011ED60 /* NoteListEmptyView.xib */; };
+		36B22093236825360011ED60 /* NoteListEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B22092236825360011ED60 /* NoteListEmptyView.swift */; };
 		60B22DAF23572BC40049B235 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B22DAE23572BC40049B235 /* NoteListViewController.swift */; };
 		60B22DB323596BC80049B235 /* NoteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B22DB223596BC80049B235 /* NoteListTableViewCell.swift */; };
 		60B22DB6235974620049B235 /* TakingNoteData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60B22DB4235974620049B235 /* TakingNoteData.xcdatamodeld */; };
@@ -160,6 +162,8 @@
 		36A1E6F9235EC38C00566D26 /* ro.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ro.js; sourceTree = "<group>"; };
 		36A1E6FA235EC38C00566D26 /* tr.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = tr.js; sourceTree = "<group>"; };
 		36B2208C2362F7330011ED60 /* NoteListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListManager.swift; sourceTree = "<group>"; };
+		36B2208E23681B020011ED60 /* NoteListEmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteListEmptyView.xib; sourceTree = "<group>"; };
+		36B22092236825360011ED60 /* NoteListEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListEmptyView.swift; sourceTree = "<group>"; };
 		60B22DAE23572BC40049B235 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		60B22DB223596BC80049B235 /* NoteListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListTableViewCell.swift; sourceTree = "<group>"; };
 		60B22DB5235974620049B235 /* TakingNoteData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TakingNoteData.xcdatamodel; sourceTree = "<group>"; };
@@ -324,6 +328,8 @@
 			isa = PBXGroup;
 			children = (
 				60B22DB223596BC80049B235 /* NoteListTableViewCell.swift */,
+				36B2208E23681B020011ED60 /* NoteListEmptyView.xib */,
+				36B22092236825360011ED60 /* NoteListEmptyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -495,6 +501,7 @@
 				36A1E726235EC38C00566D26 /* fa.js in Resources */,
 				36A1E732235EC38C00566D26 /* hu.js in Resources */,
 				36A1E73B235EC38C00566D26 /* tr.js in Resources */,
+				36B2208F23681B020011ED60 /* NoteListEmptyView.xib in Resources */,
 				36A1E70E235EC38C00566D26 /* ru.js in Resources */,
 				36A1E739235EC38C00566D26 /* eo.js in Resources */,
 				36A1E71B235EC38C00566D26 /* af.js in Resources */,
@@ -526,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B22093236825360011ED60 /* NoteListEmptyView.swift in Sources */,
 				60B22DC3235C7F010049B235 /* NoteTakingCoreDataHelper.swift in Sources */,
 				60B809BC2350259F006F815F /* EditNoteViewController.swift in Sources */,
 				60B22DB6235974620049B235 /* TakingNoteData.xcdatamodeld in Sources */,
