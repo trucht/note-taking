@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 class EditNoteViewController: UIViewController {
-        
+    
     //Edit Existed Note
     class func initWith(note: Note, index: Int) -> UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EditNoteViewController") as! EditNoteViewController
@@ -65,7 +65,7 @@ class EditNoteViewController: UIViewController {
     }
     
     //MARK: - Methods
-
+    
     private func setupUI() {
         activityIndicator.startAnimating()
         self.title = note != nil ? "Edit Note" : "Add Note"
@@ -98,7 +98,7 @@ class EditNoteViewController: UIViewController {
             }
         }
     }
-
+    
     private func handleBtnDoneTapped() {
         let js = "window.editor.getData();"
         webView.evaluateJavaScript(js) { [weak self] (result, _) in
@@ -122,7 +122,7 @@ class EditNoteViewController: UIViewController {
     
     private func loadNote(data: String) {
         let js = """
-            createEditor('\(data)');
+        createEditor('\(data)');
         """
         webView.evaluateJavaScript(js) { [weak self] (_, error) in
             if error != nil {

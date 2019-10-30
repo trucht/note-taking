@@ -31,12 +31,17 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
         
         <script>
             let editor;
-            
+            var myWebViewStyle = document.getElementById("my-webview").style
+            var myToolbarStyle = document.getElementById("my-toolbar").style
+            var myContainerStyle = document.getElementById("my-container").style
+            var myEditor = document.getElementById("editor");
+
+
             function createEditor(webContent) {
                 DecoupledEditor
                 .create( document.querySelector( '#editor' ), {
                         plugind: [],
-                        placeholder: 'Tap here to type your content here!',
+                        placeholder: 'Tap here to type your content!',
                         toolbar: ['bold', 'italic', 'underline', 'bulletedList', 'imageUpload' ],
                         
                         cloudServices: {    tokenUrl: 'https://43006.cke-cs.com/token/dev/KPXKWtiouoPLV01vrgjblKrs23FxOPwCumZzwnZr93mhtkbgWWoeTG73ECLD',
@@ -58,16 +63,7 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
                               setupToolbar()
                               setupContainer()
                               setEditor()
-                              
-                              editor.on('afterCommandExec', handleAfterCommandExec);
-                              
-                              function handleAfterCommandExec(event) {
-                                  var commandName = event.data.name;
-                              if (commandName == 'imageUpload') {
-                              document.getElementById("my-container").style.background = "blue"
-                              }
-                            }
-                      
+                              } );
                       } )
                       .catch( err => {
                              console.error( err.stack );
@@ -75,7 +71,6 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
             }
         
         function setupWebView() {
-            var myWebViewStyle = document.getElementById("my-webview").style
             myWebViewStyle.position = "fixed";
             myWebViewStyle.top = "0";
             myWebViewStyle.bottom = "0";
@@ -85,14 +80,12 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
         }
         
         function setupToolbar() {
-            var myToolbarStyle = document.getElementById("my-toolbar").style
-            myToolbarStyle.position = "sticky";
+            myToolbarStyle.position = "fixed";
             myToolbarStyle.height = "50px";
             myToolbarStyle.width = "-webkit-fill-available";
         }
         
         function setupContainer() {
-            var myContainerStyle = document.getElementById("my-container").style
             myContainerStyle.width = "-webkit-fill-available";
             myContainerStyle.position = "absolute";
             myContainerStyle.top = "50px";
@@ -101,17 +94,19 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
             myContainerStyle.webkitOverflowScrolling = "touch";
             myContainerStyle.border = "1px solid grey";
             myContainerStyle.borderRadius = "3px";
+
         }
         
         function setEditor() {
-            var myEditor = document.getElementById("editor")
             myEditor.addEventListener("focus", function()  {
                                       this.style.width = "-webkit-fill-available";
                                       this.style.position = "absolute";
-                                      this.style.top = "0";
-                                      this.style.bottom = "0";
+                                      this.style.border = "none"
+                                      this.style.height = (screen.availHeight - 400)+"px"
                                       this.style.overflowY = "scroll";
                                       this.style.webkitOverflowScrolling = "touch";
+                                      var myContainerStyle = document.getElementById("my-container").style
+                                      myContainerStyle.height = (screen.availHeight - 400)+"px"
                                       })
         }
         </script>
