@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 class EditNoteViewController: UIViewController {
-        
+    
     //Edit Existed Note
     class func initWith(note: Note, index: Int) -> UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "EditNoteViewController") as! EditNoteViewController
@@ -29,6 +29,7 @@ class EditNoteViewController: UIViewController {
     @IBOutlet var webView: WKWebView!
     @IBOutlet weak var txtNoteTitle: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     
     //MARK: - Properties
@@ -57,6 +58,9 @@ class EditNoteViewController: UIViewController {
         loadWebView()
         setupWebView()
         setupUI()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,11 +69,24 @@ class EditNoteViewController: UIViewController {
     }
     
     //MARK: - Methods
-
+    
     private func setupUI() {
         activityIndicator.startAnimating()
         self.title = note != nil ? "Edit Note" : "Add Note"
         self.txtNoteTitle.text = note?.title
+    }
+    
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        if let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let keyboardHeight = keyboardRect.height
+            self.bottomConstraint.constant = keyboardHeight + 8
+            self.reloadInputViews()
+        }
+    }
+    
+    @objc func keyboardWillDisappear(_ notification: NSNotification) {
+        self.bottomConstraint.constant = 8
+        self.reloadInputViews()
     }
     
     private func setupWebView() {
@@ -98,7 +115,7 @@ class EditNoteViewController: UIViewController {
             }
         }
     }
-
+    
     private func handleBtnDoneTapped() {
         let js = "window.editor.getData();"
         webView.evaluateJavaScript(js) { [weak self] (result, _) in
@@ -122,7 +139,7 @@ class EditNoteViewController: UIViewController {
     
     private func loadNote(data: String) {
         let js = """
-            createEditor('\(data)');
+        createEditor('\(data)');
         """
         webView.evaluateJavaScript(js) { [weak self] (_, error) in
             if error != nil {

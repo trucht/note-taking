@@ -63,8 +63,9 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
                               
                               function handleAfterCommandExec(event) {
                                   var commandName = event.data.name;
-                              if (commandName == 'imageUpload') {
-                              document.getElementById("my-container").style.background = "blue"
+                              if (commandName == 'bold') {
+                              alert('test button tapped')
+                              consoler.log('test button tapped')
                               }
                             }
                       
@@ -86,7 +87,7 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
         
         function setupToolbar() {
             var myToolbarStyle = document.getElementById("my-toolbar").style
-            myToolbarStyle.position = "sticky";
+            myToolbarStyle.position = "fixed";
             myToolbarStyle.height = "50px";
             myToolbarStyle.width = "-webkit-fill-available";
         }
@@ -95,6 +96,7 @@ For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
             var myContainerStyle = document.getElementById("my-container").style
             myContainerStyle.width = "-webkit-fill-available";
             myContainerStyle.position = "absolute";
+            myContainerStyle.display = "block";
             myContainerStyle.top = "50px";
             myContainerStyle.bottom = "0";
             myContainerStyle.overflowY = "scroll";
