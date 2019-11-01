@@ -29,6 +29,7 @@ class EditNoteViewController: UIViewController {
     @IBOutlet var webView: WKWebView!
     @IBOutlet weak var txtNoteTitle: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     
     //MARK: - Properties
@@ -57,6 +58,9 @@ class EditNoteViewController: UIViewController {
         loadWebView()
         setupWebView()
         setupUI()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +74,19 @@ class EditNoteViewController: UIViewController {
         activityIndicator.startAnimating()
         self.title = note != nil ? "Edit Note" : "Add Note"
         self.txtNoteTitle.text = note?.title
+    }
+    
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        if let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let keyboardHeight = keyboardRect.height
+            self.bottomConstraint.constant = keyboardHeight + 8
+            self.reloadInputViews()
+        }
+    }
+    
+    @objc func keyboardWillDisappear(_ notification: NSNotification) {
+        self.bottomConstraint.constant = 8
+        self.reloadInputViews()
     }
     
     private func setupWebView() {

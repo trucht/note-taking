@@ -67,6 +67,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="ml3-5K-iXt" id="KYm-qi-rfs"/>
+                        <outlet property="bottomConstraint" destination="Tzi-Pt-kC0" id="ytV-K9-vuK"/>
                         <outlet property="txtNoteTitle" destination="8TO-Rf-mVD" id="4jk-d3-tyU"/>
                         <outlet property="webView" destination="e19-f3-8Bn" id="qgM-Zf-T7X"/>
                     </connections>
