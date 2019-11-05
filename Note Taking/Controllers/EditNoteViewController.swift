@@ -110,7 +110,7 @@ class EditNoteViewController: UIViewController {
     
     private func loadWebView() {
         DispatchQueue.main.async {
-            if let url = Bundle.main.url(forResource: "editNote", withExtension: "html") {
+            if let url = Bundle.main.url(forResource: "index", withExtension: "html") {
                 self.webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
             }
         }

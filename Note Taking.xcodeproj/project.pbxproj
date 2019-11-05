@@ -7,73 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360A61C7237153E70013BA9A /* summernote.css in Resources */ = {isa = PBXBuildFile; fileRef = 360A6185237153E70013BA9A /* summernote.css */; };
+		360A61C8237153E70013BA9A /* summernote-bs4.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A6186237153E70013BA9A /* summernote-bs4.js */; };
+		360A61C9237153E70013BA9A /* summernote.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A6187237153E70013BA9A /* summernote.js */; };
+		360A61CA237153E70013BA9A /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 360A6188237153E70013BA9A /* index.html */; };
+		360A61CB237153E70013BA9A /* summernote-lite.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A6189237153E70013BA9A /* summernote-lite.js */; };
+		360A61CC237153E70013BA9A /* summernote-bs4.css in Resources */ = {isa = PBXBuildFile; fileRef = 360A618A237153E70013BA9A /* summernote-bs4.css */; };
+		360A61CD237153E70013BA9A /* summernote-bs4.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A618B237153E70013BA9A /* summernote-bs4.min.js */; };
+		360A61CE237153E70013BA9A /* summernote-lite.css in Resources */ = {isa = PBXBuildFile; fileRef = 360A618C237153E70013BA9A /* summernote-lite.css */; };
+		360A61CF237153E70013BA9A /* summernote-ext-databasic.css in Resources */ = {isa = PBXBuildFile; fileRef = 360A618F237153E70013BA9A /* summernote-ext-databasic.css */; };
+		360A61D0237153E70013BA9A /* summernote-ext-databasic.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A6190237153E70013BA9A /* summernote-ext-databasic.js */; };
+		360A61D1237153E70013BA9A /* summernote-ext-hello.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A6192237153E70013BA9A /* summernote-ext-hello.js */; };
+		360A61D2237153E70013BA9A /* summernote-ext-specialchars.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A6194237153E70013BA9A /* summernote-ext-specialchars.js */; };
+		360A61D3237153E70013BA9A /* summernote-sk-SK.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A6196237153E70013BA9A /* summernote-sk-SK.js */; };
+		360A61D4237153E70013BA9A /* summernote-it-IT.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A6197237153E70013BA9A /* summernote-it-IT.js */; };
+		360A61D5237153E70013BA9A /* summernote-uz-UZ.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A6198237153E70013BA9A /* summernote-uz-UZ.js */; };
+		360A61D6237153E70013BA9A /* summernote-id-ID.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A6199237153E70013BA9A /* summernote-id-ID.js */; };
+		360A61D7237153E70013BA9A /* summernote-lt-LV.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A619A237153E70013BA9A /* summernote-lt-LV.js */; };
+		360A61D8237153E70013BA9A /* summernote-de-DE.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A619B237153E70013BA9A /* summernote-de-DE.js */; };
+		360A61D9237153E70013BA9A /* summernote-sr-RS.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A619C237153E70013BA9A /* summernote-sr-RS.js */; };
+		360A61DA237153E70013BA9A /* summernote-ru-RU.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A619D237153E70013BA9A /* summernote-ru-RU.js */; };
+		360A61DB237153E70013BA9A /* summernote-uk-UA.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A619E237153E70013BA9A /* summernote-uk-UA.js */; };
+		360A61DC237153E70013BA9A /* summernote-pl-PL.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A619F237153E70013BA9A /* summernote-pl-PL.js */; };
+		360A61DD237153E70013BA9A /* summernote-th-TH.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61A0237153E70013BA9A /* summernote-th-TH.js */; };
+		360A61DE237153E70013BA9A /* summernote-ar-AR.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61A1237153E70013BA9A /* summernote-ar-AR.js */; };
+		360A61DF237153E70013BA9A /* summernote-fi-FI.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61A2237153E70013BA9A /* summernote-fi-FI.js */; };
+		360A61E0237153E70013BA9A /* summernote-he-IL.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61A3237153E70013BA9A /* summernote-he-IL.js */; };
+		360A61E1237153E70013BA9A /* summernote-ja-JP.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61A4237153E70013BA9A /* summernote-ja-JP.js */; };
+		360A61E2237153E70013BA9A /* summernote-el-GR.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61A5237153E70013BA9A /* summernote-el-GR.js */; };
+		360A61E3237153E70013BA9A /* summernote-es-ES.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61A6237153E70013BA9A /* summernote-es-ES.js */; };
+		360A61E4237153E70013BA9A /* summernote-sv-SE.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61A7237153E70013BA9A /* summernote-sv-SE.js */; };
+		360A61E5237153E70013BA9A /* summernote-hr-HR.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61A8237153E70013BA9A /* summernote-hr-HR.js */; };
+		360A61E6237153E70013BA9A /* summernote-da-DK.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61A9237153E70013BA9A /* summernote-da-DK.js */; };
+		360A61E7237153E70013BA9A /* summernote-gl-ES.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61AA237153E70013BA9A /* summernote-gl-ES.js */; };
+		360A61E8237153E70013BA9A /* summernote-pt-PT.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61AB237153E70013BA9A /* summernote-pt-PT.js */; };
+		360A61E9237153E70013BA9A /* summernote-pt-BR.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61AC237153E70013BA9A /* summernote-pt-BR.js */; };
+		360A61EA237153E70013BA9A /* summernote-fa-IR.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61AD237153E70013BA9A /* summernote-fa-IR.js */; };
+		360A61EB237153E70013BA9A /* summernote-zh-TW.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61AE237153E70013BA9A /* summernote-zh-TW.js */; };
+		360A61EC237153E70013BA9A /* summernote-bg-BG.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61AF237153E70013BA9A /* summernote-bg-BG.js */; };
+		360A61ED237153E70013BA9A /* summernote-sl-SI.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61B0237153E70013BA9A /* summernote-sl-SI.js */; };
+		360A61EE237153E70013BA9A /* summernote-fr-FR.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61B1237153E70013BA9A /* summernote-fr-FR.js */; };
+		360A61EF237153E70013BA9A /* summernote-nl-NL.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61B2237153E70013BA9A /* summernote-nl-NL.js */; };
+		360A61F0237153E70013BA9A /* summernote-nb-NO.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61B3237153E70013BA9A /* summernote-nb-NO.js */; };
+		360A61F1237153E70013BA9A /* summernote-cs-CZ.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61B4237153E70013BA9A /* summernote-cs-CZ.js */; };
+		360A61F2237153E70013BA9A /* summernote-es-EU.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61B5237153E70013BA9A /* summernote-es-EU.js */; };
+		360A61F3237153E70013BA9A /* summernote-zh-CN.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61B6237153E70013BA9A /* summernote-zh-CN.js */; };
+		360A61F4237153E70013BA9A /* summernote-ro-RO.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61B7237153E70013BA9A /* summernote-ro-RO.js */; };
+		360A61F5237153E70013BA9A /* summernote-ca-ES.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61B8237153E70013BA9A /* summernote-ca-ES.js */; };
+		360A61F6237153E70013BA9A /* summernote-lt-LT.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61B9237153E70013BA9A /* summernote-lt-LT.js */; };
+		360A61F7237153E70013BA9A /* summernote-ta-IN.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61BA237153E70013BA9A /* summernote-ta-IN.js */; };
+		360A61F8237153E70013BA9A /* summernote-tr-TR.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61BB237153E70013BA9A /* summernote-tr-TR.js */; };
+		360A61F9237153E70013BA9A /* summernote-mn-MN.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61BC237153E70013BA9A /* summernote-mn-MN.js */; };
+		360A61FA237153E70013BA9A /* summernote-sr-RS-Latin.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61BD237153E70013BA9A /* summernote-sr-RS-Latin.js */; };
+		360A61FB237153E70013BA9A /* summernote-ko-KR.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61BE237153E70013BA9A /* summernote-ko-KR.js */; };
+		360A61FC237153E70013BA9A /* summernote-hu-HU.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61BF237153E70013BA9A /* summernote-hu-HU.js */; };
+		360A61FD237153E70013BA9A /* summernote-vi-VN.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61C0237153E70013BA9A /* summernote-vi-VN.js */; };
+		360A61FE237153E70013BA9A /* summernote.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 360A61C2237153E70013BA9A /* summernote.ttf */; };
+		360A61FF237153E70013BA9A /* summernote.woff in Resources */ = {isa = PBXBuildFile; fileRef = 360A61C3237153E70013BA9A /* summernote.woff */; };
+		360A6200237153E70013BA9A /* summernote.eot in Resources */ = {isa = PBXBuildFile; fileRef = 360A61C4237153E70013BA9A /* summernote.eot */; };
+		360A6201237153E70013BA9A /* summernote.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61C5237153E70013BA9A /* summernote.min.js */; };
+		360A6202237153E70013BA9A /* summernote-lite.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 360A61C6237153E70013BA9A /* summernote-lite.min.js */; };
 		3619498F235EF2FB00F1C065 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3619498E235EF2FB00F1C065 /* String+Ext.swift */; };
 		36194992235F14DC00F1C065 /* Notification+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36194991235F14DC00F1C065 /* Notification+Ext.swift */; };
-		36A1E6FB235EC38C00566D26 /* editNote.html in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6B5235EC38C00566D26 /* editNote.html */; };
-		36A1E6FC235EC38C00566D26 /* ckeditor.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6B6235EC38C00566D26 /* ckeditor.js */; };
-		36A1E6FD235EC38C00566D26 /* sample.css in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6B9235EC38C00566D26 /* sample.css */; };
-		36A1E6FE235EC38C00566D26 /* github.svg in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6BB235EC38C00566D26 /* github.svg */; };
-		36A1E6FF235EC38C00566D26 /* umbrellas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6BC235EC38C00566D26 /* umbrellas.jpg */; };
-		36A1E700235EC38C00566D26 /* logo.svg in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6BD235EC38C00566D26 /* logo.svg */; };
-		36A1E701235EC38C00566D26 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6BE235EC38C00566D26 /* bg.png */; };
-		36A1E702235EC38C00566D26 /* sr-latn.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6C1235EC38C00566D26 /* sr-latn.js */; };
-		36A1E703235EC38C00566D26 /* pt.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6C2235EC38C00566D26 /* pt.js */; };
-		36A1E704235EC38C00566D26 /* vi.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6C3235EC38C00566D26 /* vi.js */; };
-		36A1E705235EC38C00566D26 /* lv.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6C4235EC38C00566D26 /* lv.js */; };
-		36A1E706235EC38C00566D26 /* gl.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6C5235EC38C00566D26 /* gl.js */; };
-		36A1E707235EC38C00566D26 /* pl.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6C6235EC38C00566D26 /* pl.js */; };
-		36A1E708235EC38C00566D26 /* el.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6C7235EC38C00566D26 /* el.js */; };
-		36A1E709235EC38C00566D26 /* et.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6C8235EC38C00566D26 /* et.js */; };
-		36A1E70A235EC38C00566D26 /* ko.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6C9235EC38C00566D26 /* ko.js */; };
-		36A1E70B235EC38C00566D26 /* hr.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6CA235EC38C00566D26 /* hr.js */; };
-		36A1E70C235EC38C00566D26 /* ms.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6CB235EC38C00566D26 /* ms.js */; };
-		36A1E70D235EC38C00566D26 /* fi.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6CC235EC38C00566D26 /* fi.js */; };
-		36A1E70E235EC38C00566D26 /* ru.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6CD235EC38C00566D26 /* ru.js */; };
-		36A1E70F235EC38C00566D26 /* eu.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6CE235EC38C00566D26 /* eu.js */; };
-		36A1E710235EC38C00566D26 /* no.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6CF235EC38C00566D26 /* no.js */; };
-		36A1E711235EC38C00566D26 /* kn.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6D0235EC38C00566D26 /* kn.js */; };
-		36A1E712235EC38C00566D26 /* sq.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6D1235EC38C00566D26 /* sq.js */; };
-		36A1E713235EC38C00566D26 /* gu.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6D2235EC38C00566D26 /* gu.js */; };
-		36A1E714235EC38C00566D26 /* si.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6D3235EC38C00566D26 /* si.js */; };
-		36A1E715235EC38C00566D26 /* tt.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6D4235EC38C00566D26 /* tt.js */; };
-		36A1E716235EC38C00566D26 /* ja.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6D5235EC38C00566D26 /* ja.js */; };
-		36A1E717235EC38C00566D26 /* he.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6D6235EC38C00566D26 /* he.js */; };
-		36A1E718235EC38C00566D26 /* ug.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6D7235EC38C00566D26 /* ug.js */; };
-		36A1E719235EC38C00566D26 /* bg.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6D8235EC38C00566D26 /* bg.js */; };
-		36A1E71A235EC38C00566D26 /* ne.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6D9235EC38C00566D26 /* ne.js */; };
-		36A1E71B235EC38C00566D26 /* af.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6DA235EC38C00566D26 /* af.js */; };
-		36A1E71C235EC38C00566D26 /* id.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6DB235EC38C00566D26 /* id.js */; };
-		36A1E71D235EC38C00566D26 /* az.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6DC235EC38C00566D26 /* az.js */; };
-		36A1E71E235EC38C00566D26 /* en-au.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6DD235EC38C00566D26 /* en-au.js */; };
-		36A1E71F235EC38C00566D26 /* ca.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6DE235EC38C00566D26 /* ca.js */; };
-		36A1E720235EC38C00566D26 /* nb.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6DF235EC38C00566D26 /* nb.js */; };
-		36A1E721235EC38C00566D26 /* zh-cn.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6E0235EC38C00566D26 /* zh-cn.js */; };
-		36A1E722235EC38C00566D26 /* de-ch.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6E1235EC38C00566D26 /* de-ch.js */; };
-		36A1E723235EC38C00566D26 /* pt-br.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6E2235EC38C00566D26 /* pt-br.js */; };
-		36A1E724235EC38C00566D26 /* oc.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6E3235EC38C00566D26 /* oc.js */; };
-		36A1E725235EC38C00566D26 /* da.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6E4235EC38C00566D26 /* da.js */; };
-		36A1E726235EC38C00566D26 /* fa.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6E5235EC38C00566D26 /* fa.js */; };
-		36A1E727235EC38C00566D26 /* de.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6E6235EC38C00566D26 /* de.js */; };
-		36A1E728235EC38C00566D26 /* ku.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6E7235EC38C00566D26 /* ku.js */; };
-		36A1E729235EC38C00566D26 /* sv.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6E8235EC38C00566D26 /* sv.js */; };
-		36A1E72A235EC38C00566D26 /* zh.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6E9235EC38C00566D26 /* zh.js */; };
-		36A1E72B235EC38C00566D26 /* uk.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6EA235EC38C00566D26 /* uk.js */; };
-		36A1E72C235EC38C00566D26 /* cs.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6EB235EC38C00566D26 /* cs.js */; };
-		36A1E72D235EC38C00566D26 /* km.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6EC235EC38C00566D26 /* km.js */; };
-		36A1E72E235EC38C00566D26 /* fr.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6ED235EC38C00566D26 /* fr.js */; };
-		36A1E72F235EC38C00566D26 /* nl.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6EE235EC38C00566D26 /* nl.js */; };
-		36A1E730235EC38C00566D26 /* en-gb.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6EF235EC38C00566D26 /* en-gb.js */; };
-		36A1E731235EC38C00566D26 /* sr.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F0235EC38C00566D26 /* sr.js */; };
-		36A1E732235EC38C00566D26 /* hu.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F1235EC38C00566D26 /* hu.js */; };
-		36A1E733235EC38C00566D26 /* lt.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F2235EC38C00566D26 /* lt.js */; };
-		36A1E734235EC38C00566D26 /* ar.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F3235EC38C00566D26 /* ar.js */; };
-		36A1E735235EC38C00566D26 /* ast.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F4235EC38C00566D26 /* ast.js */; };
-		36A1E736235EC38C00566D26 /* sk.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F5235EC38C00566D26 /* sk.js */; };
-		36A1E737235EC38C00566D26 /* it.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F6235EC38C00566D26 /* it.js */; };
-		36A1E738235EC38C00566D26 /* es.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F7235EC38C00566D26 /* es.js */; };
-		36A1E739235EC38C00566D26 /* eo.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F8235EC38C00566D26 /* eo.js */; };
-		36A1E73A235EC38C00566D26 /* ro.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6F9235EC38C00566D26 /* ro.js */; };
-		36A1E73B235EC38C00566D26 /* tr.js in Resources */ = {isa = PBXBuildFile; fileRef = 36A1E6FA235EC38C00566D26 /* tr.js */; };
 		36B2208D2362F7330011ED60 /* NoteListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2208C2362F7330011ED60 /* NoteListManager.swift */; };
 		36B2208F23681B020011ED60 /* NoteListEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36B2208E23681B020011ED60 /* NoteListEmptyView.xib */; };
 		36B22093236825360011ED60 /* NoteListEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B22092236825360011ED60 /* NoteListEmptyView.swift */; };
@@ -93,74 +88,68 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		360A6185237153E70013BA9A /* summernote.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = summernote.css; sourceTree = "<group>"; };
+		360A6186237153E70013BA9A /* summernote-bs4.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-bs4.js"; sourceTree = "<group>"; };
+		360A6187237153E70013BA9A /* summernote.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = summernote.js; sourceTree = "<group>"; };
+		360A6188237153E70013BA9A /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		360A6189237153E70013BA9A /* summernote-lite.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-lite.js"; sourceTree = "<group>"; };
+		360A618A237153E70013BA9A /* summernote-bs4.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "summernote-bs4.css"; sourceTree = "<group>"; };
+		360A618B237153E70013BA9A /* summernote-bs4.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-bs4.min.js"; sourceTree = "<group>"; };
+		360A618C237153E70013BA9A /* summernote-lite.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "summernote-lite.css"; sourceTree = "<group>"; };
+		360A618F237153E70013BA9A /* summernote-ext-databasic.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "summernote-ext-databasic.css"; sourceTree = "<group>"; };
+		360A6190237153E70013BA9A /* summernote-ext-databasic.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-ext-databasic.js"; sourceTree = "<group>"; };
+		360A6192237153E70013BA9A /* summernote-ext-hello.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-ext-hello.js"; sourceTree = "<group>"; };
+		360A6194237153E70013BA9A /* summernote-ext-specialchars.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-ext-specialchars.js"; sourceTree = "<group>"; };
+		360A6196237153E70013BA9A /* summernote-sk-SK.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-sk-SK.js"; sourceTree = "<group>"; };
+		360A6197237153E70013BA9A /* summernote-it-IT.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-it-IT.js"; sourceTree = "<group>"; };
+		360A6198237153E70013BA9A /* summernote-uz-UZ.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-uz-UZ.js"; sourceTree = "<group>"; };
+		360A6199237153E70013BA9A /* summernote-id-ID.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-id-ID.js"; sourceTree = "<group>"; };
+		360A619A237153E70013BA9A /* summernote-lt-LV.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-lt-LV.js"; sourceTree = "<group>"; };
+		360A619B237153E70013BA9A /* summernote-de-DE.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-de-DE.js"; sourceTree = "<group>"; };
+		360A619C237153E70013BA9A /* summernote-sr-RS.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-sr-RS.js"; sourceTree = "<group>"; };
+		360A619D237153E70013BA9A /* summernote-ru-RU.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-ru-RU.js"; sourceTree = "<group>"; };
+		360A619E237153E70013BA9A /* summernote-uk-UA.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-uk-UA.js"; sourceTree = "<group>"; };
+		360A619F237153E70013BA9A /* summernote-pl-PL.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-pl-PL.js"; sourceTree = "<group>"; };
+		360A61A0237153E70013BA9A /* summernote-th-TH.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-th-TH.js"; sourceTree = "<group>"; };
+		360A61A1237153E70013BA9A /* summernote-ar-AR.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-ar-AR.js"; sourceTree = "<group>"; };
+		360A61A2237153E70013BA9A /* summernote-fi-FI.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-fi-FI.js"; sourceTree = "<group>"; };
+		360A61A3237153E70013BA9A /* summernote-he-IL.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-he-IL.js"; sourceTree = "<group>"; };
+		360A61A4237153E70013BA9A /* summernote-ja-JP.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-ja-JP.js"; sourceTree = "<group>"; };
+		360A61A5237153E70013BA9A /* summernote-el-GR.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-el-GR.js"; sourceTree = "<group>"; };
+		360A61A6237153E70013BA9A /* summernote-es-ES.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-es-ES.js"; sourceTree = "<group>"; };
+		360A61A7237153E70013BA9A /* summernote-sv-SE.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-sv-SE.js"; sourceTree = "<group>"; };
+		360A61A8237153E70013BA9A /* summernote-hr-HR.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-hr-HR.js"; sourceTree = "<group>"; };
+		360A61A9237153E70013BA9A /* summernote-da-DK.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-da-DK.js"; sourceTree = "<group>"; };
+		360A61AA237153E70013BA9A /* summernote-gl-ES.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-gl-ES.js"; sourceTree = "<group>"; };
+		360A61AB237153E70013BA9A /* summernote-pt-PT.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-pt-PT.js"; sourceTree = "<group>"; };
+		360A61AC237153E70013BA9A /* summernote-pt-BR.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-pt-BR.js"; sourceTree = "<group>"; };
+		360A61AD237153E70013BA9A /* summernote-fa-IR.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-fa-IR.js"; sourceTree = "<group>"; };
+		360A61AE237153E70013BA9A /* summernote-zh-TW.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-zh-TW.js"; sourceTree = "<group>"; };
+		360A61AF237153E70013BA9A /* summernote-bg-BG.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-bg-BG.js"; sourceTree = "<group>"; };
+		360A61B0237153E70013BA9A /* summernote-sl-SI.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-sl-SI.js"; sourceTree = "<group>"; };
+		360A61B1237153E70013BA9A /* summernote-fr-FR.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-fr-FR.js"; sourceTree = "<group>"; };
+		360A61B2237153E70013BA9A /* summernote-nl-NL.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-nl-NL.js"; sourceTree = "<group>"; };
+		360A61B3237153E70013BA9A /* summernote-nb-NO.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-nb-NO.js"; sourceTree = "<group>"; };
+		360A61B4237153E70013BA9A /* summernote-cs-CZ.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-cs-CZ.js"; sourceTree = "<group>"; };
+		360A61B5237153E70013BA9A /* summernote-es-EU.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-es-EU.js"; sourceTree = "<group>"; };
+		360A61B6237153E70013BA9A /* summernote-zh-CN.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-zh-CN.js"; sourceTree = "<group>"; };
+		360A61B7237153E70013BA9A /* summernote-ro-RO.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-ro-RO.js"; sourceTree = "<group>"; };
+		360A61B8237153E70013BA9A /* summernote-ca-ES.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-ca-ES.js"; sourceTree = "<group>"; };
+		360A61B9237153E70013BA9A /* summernote-lt-LT.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-lt-LT.js"; sourceTree = "<group>"; };
+		360A61BA237153E70013BA9A /* summernote-ta-IN.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-ta-IN.js"; sourceTree = "<group>"; };
+		360A61BB237153E70013BA9A /* summernote-tr-TR.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-tr-TR.js"; sourceTree = "<group>"; };
+		360A61BC237153E70013BA9A /* summernote-mn-MN.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-mn-MN.js"; sourceTree = "<group>"; };
+		360A61BD237153E70013BA9A /* summernote-sr-RS-Latin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-sr-RS-Latin.js"; sourceTree = "<group>"; };
+		360A61BE237153E70013BA9A /* summernote-ko-KR.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-ko-KR.js"; sourceTree = "<group>"; };
+		360A61BF237153E70013BA9A /* summernote-hu-HU.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-hu-HU.js"; sourceTree = "<group>"; };
+		360A61C0237153E70013BA9A /* summernote-vi-VN.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-vi-VN.js"; sourceTree = "<group>"; };
+		360A61C2237153E70013BA9A /* summernote.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = summernote.ttf; sourceTree = "<group>"; };
+		360A61C3237153E70013BA9A /* summernote.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = summernote.woff; sourceTree = "<group>"; };
+		360A61C4237153E70013BA9A /* summernote.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = summernote.eot; sourceTree = "<group>"; };
+		360A61C5237153E70013BA9A /* summernote.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = summernote.min.js; sourceTree = "<group>"; };
+		360A61C6237153E70013BA9A /* summernote-lite.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "summernote-lite.min.js"; sourceTree = "<group>"; };
 		3619498E235EF2FB00F1C065 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		36194991235F14DC00F1C065 /* Notification+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Ext.swift"; sourceTree = "<group>"; };
-		36A1E6B5235EC38C00566D26 /* editNote.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = editNote.html; sourceTree = "<group>"; };
-		36A1E6B6235EC38C00566D26 /* ckeditor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ckeditor.js; sourceTree = "<group>"; };
-		36A1E6B9235EC38C00566D26 /* sample.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sample.css; sourceTree = "<group>"; };
-		36A1E6BB235EC38C00566D26 /* github.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = github.svg; sourceTree = "<group>"; };
-		36A1E6BC235EC38C00566D26 /* umbrellas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = umbrellas.jpg; sourceTree = "<group>"; };
-		36A1E6BD235EC38C00566D26 /* logo.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = logo.svg; sourceTree = "<group>"; };
-		36A1E6BE235EC38C00566D26 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		36A1E6BF235EC38C00566D26 /* ckeditor.js.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = ckeditor.js.map; sourceTree = "<group>"; };
-		36A1E6C1235EC38C00566D26 /* sr-latn.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "sr-latn.js"; sourceTree = "<group>"; };
-		36A1E6C2235EC38C00566D26 /* pt.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = pt.js; sourceTree = "<group>"; };
-		36A1E6C3235EC38C00566D26 /* vi.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = vi.js; sourceTree = "<group>"; };
-		36A1E6C4235EC38C00566D26 /* lv.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = lv.js; sourceTree = "<group>"; };
-		36A1E6C5235EC38C00566D26 /* gl.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = gl.js; sourceTree = "<group>"; };
-		36A1E6C6235EC38C00566D26 /* pl.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = pl.js; sourceTree = "<group>"; };
-		36A1E6C7235EC38C00566D26 /* el.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = el.js; sourceTree = "<group>"; };
-		36A1E6C8235EC38C00566D26 /* et.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = et.js; sourceTree = "<group>"; };
-		36A1E6C9235EC38C00566D26 /* ko.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ko.js; sourceTree = "<group>"; };
-		36A1E6CA235EC38C00566D26 /* hr.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hr.js; sourceTree = "<group>"; };
-		36A1E6CB235EC38C00566D26 /* ms.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ms.js; sourceTree = "<group>"; };
-		36A1E6CC235EC38C00566D26 /* fi.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fi.js; sourceTree = "<group>"; };
-		36A1E6CD235EC38C00566D26 /* ru.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ru.js; sourceTree = "<group>"; };
-		36A1E6CE235EC38C00566D26 /* eu.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = eu.js; sourceTree = "<group>"; };
-		36A1E6CF235EC38C00566D26 /* no.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = no.js; sourceTree = "<group>"; };
-		36A1E6D0235EC38C00566D26 /* kn.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = kn.js; sourceTree = "<group>"; };
-		36A1E6D1235EC38C00566D26 /* sq.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sq.js; sourceTree = "<group>"; };
-		36A1E6D2235EC38C00566D26 /* gu.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = gu.js; sourceTree = "<group>"; };
-		36A1E6D3235EC38C00566D26 /* si.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = si.js; sourceTree = "<group>"; };
-		36A1E6D4235EC38C00566D26 /* tt.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = tt.js; sourceTree = "<group>"; };
-		36A1E6D5235EC38C00566D26 /* ja.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ja.js; sourceTree = "<group>"; };
-		36A1E6D6235EC38C00566D26 /* he.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = he.js; sourceTree = "<group>"; };
-		36A1E6D7235EC38C00566D26 /* ug.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ug.js; sourceTree = "<group>"; };
-		36A1E6D8235EC38C00566D26 /* bg.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bg.js; sourceTree = "<group>"; };
-		36A1E6D9235EC38C00566D26 /* ne.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ne.js; sourceTree = "<group>"; };
-		36A1E6DA235EC38C00566D26 /* af.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = af.js; sourceTree = "<group>"; };
-		36A1E6DB235EC38C00566D26 /* id.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = id.js; sourceTree = "<group>"; };
-		36A1E6DC235EC38C00566D26 /* az.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = az.js; sourceTree = "<group>"; };
-		36A1E6DD235EC38C00566D26 /* en-au.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "en-au.js"; sourceTree = "<group>"; };
-		36A1E6DE235EC38C00566D26 /* ca.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ca.js; sourceTree = "<group>"; };
-		36A1E6DF235EC38C00566D26 /* nb.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = nb.js; sourceTree = "<group>"; };
-		36A1E6E0235EC38C00566D26 /* zh-cn.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "zh-cn.js"; sourceTree = "<group>"; };
-		36A1E6E1235EC38C00566D26 /* de-ch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "de-ch.js"; sourceTree = "<group>"; };
-		36A1E6E2235EC38C00566D26 /* pt-br.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "pt-br.js"; sourceTree = "<group>"; };
-		36A1E6E3235EC38C00566D26 /* oc.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = oc.js; sourceTree = "<group>"; };
-		36A1E6E4235EC38C00566D26 /* da.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = da.js; sourceTree = "<group>"; };
-		36A1E6E5235EC38C00566D26 /* fa.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fa.js; sourceTree = "<group>"; };
-		36A1E6E6235EC38C00566D26 /* de.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = de.js; sourceTree = "<group>"; };
-		36A1E6E7235EC38C00566D26 /* ku.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ku.js; sourceTree = "<group>"; };
-		36A1E6E8235EC38C00566D26 /* sv.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sv.js; sourceTree = "<group>"; };
-		36A1E6E9235EC38C00566D26 /* zh.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = zh.js; sourceTree = "<group>"; };
-		36A1E6EA235EC38C00566D26 /* uk.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = uk.js; sourceTree = "<group>"; };
-		36A1E6EB235EC38C00566D26 /* cs.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = cs.js; sourceTree = "<group>"; };
-		36A1E6EC235EC38C00566D26 /* km.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = km.js; sourceTree = "<group>"; };
-		36A1E6ED235EC38C00566D26 /* fr.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fr.js; sourceTree = "<group>"; };
-		36A1E6EE235EC38C00566D26 /* nl.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = nl.js; sourceTree = "<group>"; };
-		36A1E6EF235EC38C00566D26 /* en-gb.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "en-gb.js"; sourceTree = "<group>"; };
-		36A1E6F0235EC38C00566D26 /* sr.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sr.js; sourceTree = "<group>"; };
-		36A1E6F1235EC38C00566D26 /* hu.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hu.js; sourceTree = "<group>"; };
-		36A1E6F2235EC38C00566D26 /* lt.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = lt.js; sourceTree = "<group>"; };
-		36A1E6F3235EC38C00566D26 /* ar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ar.js; sourceTree = "<group>"; };
-		36A1E6F4235EC38C00566D26 /* ast.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ast.js; sourceTree = "<group>"; };
-		36A1E6F5235EC38C00566D26 /* sk.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sk.js; sourceTree = "<group>"; };
-		36A1E6F6235EC38C00566D26 /* it.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = it.js; sourceTree = "<group>"; };
-		36A1E6F7235EC38C00566D26 /* es.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = es.js; sourceTree = "<group>"; };
-		36A1E6F8235EC38C00566D26 /* eo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = eo.js; sourceTree = "<group>"; };
-		36A1E6F9235EC38C00566D26 /* ro.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ro.js; sourceTree = "<group>"; };
-		36A1E6FA235EC38C00566D26 /* tr.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = tr.js; sourceTree = "<group>"; };
 		36B2208C2362F7330011ED60 /* NoteListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListManager.swift; sourceTree = "<group>"; };
 		36B2208E23681B020011ED60 /* NoteListEmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteListEmptyView.xib; sourceTree = "<group>"; };
 		36B22092236825360011ED60 /* NoteListEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListEmptyView.swift; sourceTree = "<group>"; };
@@ -192,6 +181,121 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		360A6184237153E70013BA9A /* summernote */ = {
+			isa = PBXGroup;
+			children = (
+				360A6188237153E70013BA9A /* index.html */,
+				360A6185237153E70013BA9A /* summernote.css */,
+				360A6186237153E70013BA9A /* summernote-bs4.js */,
+				360A6187237153E70013BA9A /* summernote.js */,
+				360A6189237153E70013BA9A /* summernote-lite.js */,
+				360A618A237153E70013BA9A /* summernote-bs4.css */,
+				360A618B237153E70013BA9A /* summernote-bs4.min.js */,
+				360A618C237153E70013BA9A /* summernote-lite.css */,
+				360A618D237153E70013BA9A /* plugin */,
+				360A6195237153E70013BA9A /* lang */,
+				360A61C1237153E70013BA9A /* font */,
+				360A61C5237153E70013BA9A /* summernote.min.js */,
+				360A61C6237153E70013BA9A /* summernote-lite.min.js */,
+			);
+			path = summernote;
+			sourceTree = "<group>";
+		};
+		360A618D237153E70013BA9A /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				360A618E237153E70013BA9A /* databasic */,
+				360A6191237153E70013BA9A /* hello */,
+				360A6193237153E70013BA9A /* specialchars */,
+			);
+			path = plugin;
+			sourceTree = "<group>";
+		};
+		360A618E237153E70013BA9A /* databasic */ = {
+			isa = PBXGroup;
+			children = (
+				360A618F237153E70013BA9A /* summernote-ext-databasic.css */,
+				360A6190237153E70013BA9A /* summernote-ext-databasic.js */,
+			);
+			path = databasic;
+			sourceTree = "<group>";
+		};
+		360A6191237153E70013BA9A /* hello */ = {
+			isa = PBXGroup;
+			children = (
+				360A6192237153E70013BA9A /* summernote-ext-hello.js */,
+			);
+			path = hello;
+			sourceTree = "<group>";
+		};
+		360A6193237153E70013BA9A /* specialchars */ = {
+			isa = PBXGroup;
+			children = (
+				360A6194237153E70013BA9A /* summernote-ext-specialchars.js */,
+			);
+			path = specialchars;
+			sourceTree = "<group>";
+		};
+		360A6195237153E70013BA9A /* lang */ = {
+			isa = PBXGroup;
+			children = (
+				360A6196237153E70013BA9A /* summernote-sk-SK.js */,
+				360A6197237153E70013BA9A /* summernote-it-IT.js */,
+				360A6198237153E70013BA9A /* summernote-uz-UZ.js */,
+				360A6199237153E70013BA9A /* summernote-id-ID.js */,
+				360A619A237153E70013BA9A /* summernote-lt-LV.js */,
+				360A619B237153E70013BA9A /* summernote-de-DE.js */,
+				360A619C237153E70013BA9A /* summernote-sr-RS.js */,
+				360A619D237153E70013BA9A /* summernote-ru-RU.js */,
+				360A619E237153E70013BA9A /* summernote-uk-UA.js */,
+				360A619F237153E70013BA9A /* summernote-pl-PL.js */,
+				360A61A0237153E70013BA9A /* summernote-th-TH.js */,
+				360A61A1237153E70013BA9A /* summernote-ar-AR.js */,
+				360A61A2237153E70013BA9A /* summernote-fi-FI.js */,
+				360A61A3237153E70013BA9A /* summernote-he-IL.js */,
+				360A61A4237153E70013BA9A /* summernote-ja-JP.js */,
+				360A61A5237153E70013BA9A /* summernote-el-GR.js */,
+				360A61A6237153E70013BA9A /* summernote-es-ES.js */,
+				360A61A7237153E70013BA9A /* summernote-sv-SE.js */,
+				360A61A8237153E70013BA9A /* summernote-hr-HR.js */,
+				360A61A9237153E70013BA9A /* summernote-da-DK.js */,
+				360A61AA237153E70013BA9A /* summernote-gl-ES.js */,
+				360A61AB237153E70013BA9A /* summernote-pt-PT.js */,
+				360A61AC237153E70013BA9A /* summernote-pt-BR.js */,
+				360A61AD237153E70013BA9A /* summernote-fa-IR.js */,
+				360A61AE237153E70013BA9A /* summernote-zh-TW.js */,
+				360A61AF237153E70013BA9A /* summernote-bg-BG.js */,
+				360A61B0237153E70013BA9A /* summernote-sl-SI.js */,
+				360A61B1237153E70013BA9A /* summernote-fr-FR.js */,
+				360A61B2237153E70013BA9A /* summernote-nl-NL.js */,
+				360A61B3237153E70013BA9A /* summernote-nb-NO.js */,
+				360A61B4237153E70013BA9A /* summernote-cs-CZ.js */,
+				360A61B5237153E70013BA9A /* summernote-es-EU.js */,
+				360A61B6237153E70013BA9A /* summernote-zh-CN.js */,
+				360A61B7237153E70013BA9A /* summernote-ro-RO.js */,
+				360A61B8237153E70013BA9A /* summernote-ca-ES.js */,
+				360A61B9237153E70013BA9A /* summernote-lt-LT.js */,
+				360A61BA237153E70013BA9A /* summernote-ta-IN.js */,
+				360A61BB237153E70013BA9A /* summernote-tr-TR.js */,
+				360A61BC237153E70013BA9A /* summernote-mn-MN.js */,
+				360A61BD237153E70013BA9A /* summernote-sr-RS-Latin.js */,
+				360A61BE237153E70013BA9A /* summernote-ko-KR.js */,
+				360A61BF237153E70013BA9A /* summernote-hu-HU.js */,
+				360A61C0237153E70013BA9A /* summernote-vi-VN.js */,
+			);
+			path = lang;
+			sourceTree = "<group>";
+		};
+		360A61C1237153E70013BA9A /* font */ = {
+			isa = PBXGroup;
+			children = (
+				360A61C2237153E70013BA9A /* summernote.ttf */,
+				360A61C3237153E70013BA9A /* summernote.woff */,
+				360A61C4237153E70013BA9A /* summernote.eot */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
 		3619498D235EF2D900F1C065 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,111 +312,6 @@
 				60B855DD235067F6006F815F /* Note.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		36A1E6B4235EC38C00566D26 /* ckeditor5 */ = {
-			isa = PBXGroup;
-			children = (
-				36A1E6B5235EC38C00566D26 /* editNote.html */,
-				36A1E6B6235EC38C00566D26 /* ckeditor.js */,
-				36A1E6B7235EC38C00566D26 /* sample */,
-				36A1E6BF235EC38C00566D26 /* ckeditor.js.map */,
-				36A1E6C0235EC38C00566D26 /* translations */,
-			);
-			path = ckeditor5;
-			sourceTree = "<group>";
-		};
-		36A1E6B7235EC38C00566D26 /* sample */ = {
-			isa = PBXGroup;
-			children = (
-				36A1E6B8235EC38C00566D26 /* css */,
-				36A1E6BA235EC38C00566D26 /* img */,
-			);
-			path = sample;
-			sourceTree = "<group>";
-		};
-		36A1E6B8235EC38C00566D26 /* css */ = {
-			isa = PBXGroup;
-			children = (
-				36A1E6B9235EC38C00566D26 /* sample.css */,
-			);
-			path = css;
-			sourceTree = "<group>";
-		};
-		36A1E6BA235EC38C00566D26 /* img */ = {
-			isa = PBXGroup;
-			children = (
-				36A1E6BB235EC38C00566D26 /* github.svg */,
-				36A1E6BC235EC38C00566D26 /* umbrellas.jpg */,
-				36A1E6BD235EC38C00566D26 /* logo.svg */,
-				36A1E6BE235EC38C00566D26 /* bg.png */,
-			);
-			path = img;
-			sourceTree = "<group>";
-		};
-		36A1E6C0235EC38C00566D26 /* translations */ = {
-			isa = PBXGroup;
-			children = (
-				36A1E6C1235EC38C00566D26 /* sr-latn.js */,
-				36A1E6C2235EC38C00566D26 /* pt.js */,
-				36A1E6C3235EC38C00566D26 /* vi.js */,
-				36A1E6C4235EC38C00566D26 /* lv.js */,
-				36A1E6C5235EC38C00566D26 /* gl.js */,
-				36A1E6C6235EC38C00566D26 /* pl.js */,
-				36A1E6C7235EC38C00566D26 /* el.js */,
-				36A1E6C8235EC38C00566D26 /* et.js */,
-				36A1E6C9235EC38C00566D26 /* ko.js */,
-				36A1E6CA235EC38C00566D26 /* hr.js */,
-				36A1E6CB235EC38C00566D26 /* ms.js */,
-				36A1E6CC235EC38C00566D26 /* fi.js */,
-				36A1E6CD235EC38C00566D26 /* ru.js */,
-				36A1E6CE235EC38C00566D26 /* eu.js */,
-				36A1E6CF235EC38C00566D26 /* no.js */,
-				36A1E6D0235EC38C00566D26 /* kn.js */,
-				36A1E6D1235EC38C00566D26 /* sq.js */,
-				36A1E6D2235EC38C00566D26 /* gu.js */,
-				36A1E6D3235EC38C00566D26 /* si.js */,
-				36A1E6D4235EC38C00566D26 /* tt.js */,
-				36A1E6D5235EC38C00566D26 /* ja.js */,
-				36A1E6D6235EC38C00566D26 /* he.js */,
-				36A1E6D7235EC38C00566D26 /* ug.js */,
-				36A1E6D8235EC38C00566D26 /* bg.js */,
-				36A1E6D9235EC38C00566D26 /* ne.js */,
-				36A1E6DA235EC38C00566D26 /* af.js */,
-				36A1E6DB235EC38C00566D26 /* id.js */,
-				36A1E6DC235EC38C00566D26 /* az.js */,
-				36A1E6DD235EC38C00566D26 /* en-au.js */,
-				36A1E6DE235EC38C00566D26 /* ca.js */,
-				36A1E6DF235EC38C00566D26 /* nb.js */,
-				36A1E6E0235EC38C00566D26 /* zh-cn.js */,
-				36A1E6E1235EC38C00566D26 /* de-ch.js */,
-				36A1E6E2235EC38C00566D26 /* pt-br.js */,
-				36A1E6E3235EC38C00566D26 /* oc.js */,
-				36A1E6E4235EC38C00566D26 /* da.js */,
-				36A1E6E5235EC38C00566D26 /* fa.js */,
-				36A1E6E6235EC38C00566D26 /* de.js */,
-				36A1E6E7235EC38C00566D26 /* ku.js */,
-				36A1E6E8235EC38C00566D26 /* sv.js */,
-				36A1E6E9235EC38C00566D26 /* zh.js */,
-				36A1E6EA235EC38C00566D26 /* uk.js */,
-				36A1E6EB235EC38C00566D26 /* cs.js */,
-				36A1E6EC235EC38C00566D26 /* km.js */,
-				36A1E6ED235EC38C00566D26 /* fr.js */,
-				36A1E6EE235EC38C00566D26 /* nl.js */,
-				36A1E6EF235EC38C00566D26 /* en-gb.js */,
-				36A1E6F0235EC38C00566D26 /* sr.js */,
-				36A1E6F1235EC38C00566D26 /* hu.js */,
-				36A1E6F2235EC38C00566D26 /* lt.js */,
-				36A1E6F3235EC38C00566D26 /* ar.js */,
-				36A1E6F4235EC38C00566D26 /* ast.js */,
-				36A1E6F5235EC38C00566D26 /* sk.js */,
-				36A1E6F6235EC38C00566D26 /* it.js */,
-				36A1E6F7235EC38C00566D26 /* es.js */,
-				36A1E6F8235EC38C00566D26 /* eo.js */,
-				36A1E6F9235EC38C00566D26 /* ro.js */,
-				36A1E6FA235EC38C00566D26 /* tr.js */,
-			);
-			path = translations;
 			sourceTree = "<group>";
 		};
 		36B2208A2362CF8E0011ED60 /* Resources */ = {
@@ -354,7 +353,7 @@
 		60B809B62350259F006F815F /* Note Taking */ = {
 			isa = PBXGroup;
 			children = (
-				36A1E6B4235EC38C00566D26 /* ckeditor5 */,
+				360A6184237153E70013BA9A /* summernote */,
 				36194990235EFB8600F1C065 /* Models */,
 				36B2208B2362D0D10011ED60 /* Views */,
 				60FAA0B4235D9DEF00D4EFB9 /* Controllers */,
@@ -455,74 +454,69 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36A1E72F235EC38C00566D26 /* nl.js in Resources */,
-				36A1E728235EC38C00566D26 /* ku.js in Resources */,
-				36A1E720235EC38C00566D26 /* nb.js in Resources */,
-				36A1E721235EC38C00566D26 /* zh-cn.js in Resources */,
-				36A1E730235EC38C00566D26 /* en-gb.js in Resources */,
-				36A1E729235EC38C00566D26 /* sv.js in Resources */,
-				36A1E72D235EC38C00566D26 /* km.js in Resources */,
-				36A1E719235EC38C00566D26 /* bg.js in Resources */,
-				36A1E72E235EC38C00566D26 /* fr.js in Resources */,
-				36A1E733235EC38C00566D26 /* lt.js in Resources */,
-				36A1E71A235EC38C00566D26 /* ne.js in Resources */,
-				36A1E71D235EC38C00566D26 /* az.js in Resources */,
-				36A1E712235EC38C00566D26 /* sq.js in Resources */,
-				36A1E725235EC38C00566D26 /* da.js in Resources */,
-				36A1E70C235EC38C00566D26 /* ms.js in Resources */,
-				36A1E734235EC38C00566D26 /* ar.js in Resources */,
-				36A1E70A235EC38C00566D26 /* ko.js in Resources */,
-				36A1E70B235EC38C00566D26 /* hr.js in Resources */,
-				36A1E705235EC38C00566D26 /* lv.js in Resources */,
-				36A1E708235EC38C00566D26 /* el.js in Resources */,
-				36A1E736235EC38C00566D26 /* sk.js in Resources */,
-				36A1E72C235EC38C00566D26 /* cs.js in Resources */,
-				36A1E703235EC38C00566D26 /* pt.js in Resources */,
-				36A1E71C235EC38C00566D26 /* id.js in Resources */,
-				36A1E702235EC38C00566D26 /* sr-latn.js in Resources */,
-				36A1E722235EC38C00566D26 /* de-ch.js in Resources */,
-				36A1E717235EC38C00566D26 /* he.js in Resources */,
-				36A1E706235EC38C00566D26 /* gl.js in Resources */,
-				36A1E716235EC38C00566D26 /* ja.js in Resources */,
-				36A1E6FB235EC38C00566D26 /* editNote.html in Resources */,
-				36A1E718235EC38C00566D26 /* ug.js in Resources */,
-				36A1E711235EC38C00566D26 /* kn.js in Resources */,
-				36A1E723235EC38C00566D26 /* pt-br.js in Resources */,
-				36A1E73A235EC38C00566D26 /* ro.js in Resources */,
-				36A1E724235EC38C00566D26 /* oc.js in Resources */,
-				36A1E704235EC38C00566D26 /* vi.js in Resources */,
-				36A1E714235EC38C00566D26 /* si.js in Resources */,
-				36A1E713235EC38C00566D26 /* gu.js in Resources */,
-				36A1E707235EC38C00566D26 /* pl.js in Resources */,
-				36A1E70F235EC38C00566D26 /* eu.js in Resources */,
-				36A1E737235EC38C00566D26 /* it.js in Resources */,
-				36A1E738235EC38C00566D26 /* es.js in Resources */,
-				36A1E735235EC38C00566D26 /* ast.js in Resources */,
-				36A1E726235EC38C00566D26 /* fa.js in Resources */,
-				36A1E732235EC38C00566D26 /* hu.js in Resources */,
-				36A1E73B235EC38C00566D26 /* tr.js in Resources */,
+				360A61ED237153E70013BA9A /* summernote-sl-SI.js in Resources */,
+				360A61CA237153E70013BA9A /* index.html in Resources */,
+				360A61E5237153E70013BA9A /* summernote-hr-HR.js in Resources */,
+				360A61EF237153E70013BA9A /* summernote-nl-NL.js in Resources */,
+				360A61DD237153E70013BA9A /* summernote-th-TH.js in Resources */,
+				360A61FC237153E70013BA9A /* summernote-hu-HU.js in Resources */,
+				360A61E1237153E70013BA9A /* summernote-ja-JP.js in Resources */,
+				360A61EB237153E70013BA9A /* summernote-zh-TW.js in Resources */,
+				360A61C7237153E70013BA9A /* summernote.css in Resources */,
+				360A61C9237153E70013BA9A /* summernote.js in Resources */,
+				360A61EE237153E70013BA9A /* summernote-fr-FR.js in Resources */,
+				360A61DC237153E70013BA9A /* summernote-pl-PL.js in Resources */,
+				360A61F5237153E70013BA9A /* summernote-ca-ES.js in Resources */,
+				360A61D3237153E70013BA9A /* summernote-sk-SK.js in Resources */,
+				360A61DE237153E70013BA9A /* summernote-ar-AR.js in Resources */,
+				360A61D6237153E70013BA9A /* summernote-id-ID.js in Resources */,
+				360A61D8237153E70013BA9A /* summernote-de-DE.js in Resources */,
+				360A61E0237153E70013BA9A /* summernote-he-IL.js in Resources */,
+				360A61D7237153E70013BA9A /* summernote-lt-LV.js in Resources */,
+				360A61E9237153E70013BA9A /* summernote-pt-BR.js in Resources */,
+				360A61E6237153E70013BA9A /* summernote-da-DK.js in Resources */,
+				360A6202237153E70013BA9A /* summernote-lite.min.js in Resources */,
 				36B2208F23681B020011ED60 /* NoteListEmptyView.xib in Resources */,
-				36A1E70E235EC38C00566D26 /* ru.js in Resources */,
-				36A1E739235EC38C00566D26 /* eo.js in Resources */,
-				36A1E71B235EC38C00566D26 /* af.js in Resources */,
-				36A1E709235EC38C00566D26 /* et.js in Resources */,
+				360A61FF237153E70013BA9A /* summernote.woff in Resources */,
 				60B809C1235025A1006F815F /* Assets.xcassets in Resources */,
-				36A1E701235EC38C00566D26 /* bg.png in Resources */,
+				360A61FB237153E70013BA9A /* summernote-ko-KR.js in Resources */,
+				360A61D0237153E70013BA9A /* summernote-ext-databasic.js in Resources */,
+				360A61F7237153E70013BA9A /* summernote-ta-IN.js in Resources */,
+				360A61D4237153E70013BA9A /* summernote-it-IT.js in Resources */,
+				360A61CF237153E70013BA9A /* summernote-ext-databasic.css in Resources */,
+				360A6200237153E70013BA9A /* summernote.eot in Resources */,
+				360A61C8237153E70013BA9A /* summernote-bs4.js in Resources */,
+				360A61D2237153E70013BA9A /* summernote-ext-specialchars.js in Resources */,
+				360A61F3237153E70013BA9A /* summernote-zh-CN.js in Resources */,
+				360A6201237153E70013BA9A /* summernote.min.js in Resources */,
+				360A61F9237153E70013BA9A /* summernote-mn-MN.js in Resources */,
+				360A61E8237153E70013BA9A /* summernote-pt-PT.js in Resources */,
+				360A61DF237153E70013BA9A /* summernote-fi-FI.js in Resources */,
+				360A61FD237153E70013BA9A /* summernote-vi-VN.js in Resources */,
+				360A61DA237153E70013BA9A /* summernote-ru-RU.js in Resources */,
+				360A61F4237153E70013BA9A /* summernote-ro-RO.js in Resources */,
+				360A61FA237153E70013BA9A /* summernote-sr-RS-Latin.js in Resources */,
+				360A61E2237153E70013BA9A /* summernote-el-GR.js in Resources */,
+				360A61D1237153E70013BA9A /* summernote-ext-hello.js in Resources */,
+				360A61E3237153E70013BA9A /* summernote-es-ES.js in Resources */,
 				60B809BF2350259F006F815F /* Main.storyboard in Resources */,
-				36A1E70D235EC38C00566D26 /* fi.js in Resources */,
-				36A1E6FF235EC38C00566D26 /* umbrellas.jpg in Resources */,
-				36A1E72A235EC38C00566D26 /* zh.js in Resources */,
-				36A1E727235EC38C00566D26 /* de.js in Resources */,
-				36A1E71E235EC38C00566D26 /* en-au.js in Resources */,
-				36A1E6FC235EC38C00566D26 /* ckeditor.js in Resources */,
-				36A1E715235EC38C00566D26 /* tt.js in Resources */,
-				36A1E72B235EC38C00566D26 /* uk.js in Resources */,
-				36A1E731235EC38C00566D26 /* sr.js in Resources */,
-				36A1E6FD235EC38C00566D26 /* sample.css in Resources */,
-				36A1E710235EC38C00566D26 /* no.js in Resources */,
-				36A1E71F235EC38C00566D26 /* ca.js in Resources */,
-				36A1E6FE235EC38C00566D26 /* github.svg in Resources */,
-				36A1E700235EC38C00566D26 /* logo.svg in Resources */,
+				360A61FE237153E70013BA9A /* summernote.ttf in Resources */,
+				360A61CB237153E70013BA9A /* summernote-lite.js in Resources */,
+				360A61CC237153E70013BA9A /* summernote-bs4.css in Resources */,
+				360A61D5237153E70013BA9A /* summernote-uz-UZ.js in Resources */,
+				360A61F8237153E70013BA9A /* summernote-tr-TR.js in Resources */,
+				360A61E7237153E70013BA9A /* summernote-gl-ES.js in Resources */,
+				360A61D9237153E70013BA9A /* summernote-sr-RS.js in Resources */,
+				360A61E4237153E70013BA9A /* summernote-sv-SE.js in Resources */,
+				360A61F2237153E70013BA9A /* summernote-es-EU.js in Resources */,
+				360A61DB237153E70013BA9A /* summernote-uk-UA.js in Resources */,
+				360A61EA237153E70013BA9A /* summernote-fa-IR.js in Resources */,
+				360A61F6237153E70013BA9A /* summernote-lt-LT.js in Resources */,
+				360A61EC237153E70013BA9A /* summernote-bg-BG.js in Resources */,
+				360A61F1237153E70013BA9A /* summernote-cs-CZ.js in Resources */,
+				360A61CD237153E70013BA9A /* summernote-bs4.min.js in Resources */,
+				360A61F0237153E70013BA9A /* summernote-nb-NO.js in Resources */,
+				360A61CE237153E70013BA9A /* summernote-lite.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
