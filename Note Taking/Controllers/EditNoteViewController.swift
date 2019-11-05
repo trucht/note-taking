@@ -110,7 +110,7 @@ class EditNoteViewController: UIViewController {
     
     private func loadWebView() {
         DispatchQueue.main.async {
-            if let url = Bundle.main.url(forResource: "editNote", withExtension: "html") {
+            if let url = Bundle.main.url(forResource: "index", withExtension: "html") {
                 self.webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
             }
         }
@@ -154,11 +154,13 @@ class EditNoteViewController: UIViewController {
 //MARK: - Navigation Delegate
 extension EditNoteViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        if note != nil {
-            loadNote(data: note!.content)
-        } else {
-            loadNote(data: "")
-        }
+//        if note != nil {
+//            loadNote(data: note!.content)
+//        } else {
+//            loadNote(data: "")
+//        }
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.isHidden = true
     }
 }
 
